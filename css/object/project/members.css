@@ -53,6 +53,16 @@
 }
 
 /* 学生 */
+/* 個人ページがある学生はブロック全体をリンクにする */
+.p-members__student-link {
+    display: block;
+    transition: opacity 0.2s;
+}
+
+.p-members__student-link:hover {
+    opacity: 0.7;
+}
+
 .p-members__student-img {
     width: 100%;
     margin: auto;
