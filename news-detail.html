@@ -15,11 +15,11 @@
     <header class="l-header" data-include="/include/header.html"></header>
 
     <main class="l-main">
-        <div class="p-news">
+        <div class="p-news-detail">
             <h1 class="c-section-title">News</h1>
-            <div class="p-news__box">
-                <ul class="c-news-list" id="js-news-list"></ul>
-            </div>
+            <!-- 記事の中身は js/news.js が data/news.json から挿入する -->
+            <div id="js-news-detail"></div>
+            <a class="p-news-detail__back" href="/news.html">ニュース一覧へ</a>
         </div>
     </main>
 

@@ -1,4 +1,22 @@
 /* トップページ */
+.p-top {
+    margin: 7.5%;
+}
+
+/* 最新ニュース */
+.p-top__news {
+    display: flow-root;
+    margin-bottom: 3em;
+}
+
+.p-top__news-more {
+    display: block;
+    width: fit-content;
+    margin: 1em 0 0 auto;
+    color: #333333;
+    text-decoration: underline;
+}
+
 .p-top__list {
     margin-bottom: 20px;
 }
@@ -14,10 +32,6 @@
 }
 
 @media screen and (max-width: 768px) {
-    .p-top__intro {
-        width: 80%;
-    }
-
     .p-top__projects {
         display: flex;
         flex-wrap: wrap;
