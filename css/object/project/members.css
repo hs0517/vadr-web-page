@@ -43,6 +43,8 @@
 
 .p-members__faculty-name {
     font-size: 2.2em;
+    /* 親の line-height: 0.5em のままだと、名前が2行に折り返したときに行が重なる */
+    line-height: 1.2;
 }
 
 .p-members__faculty-text {
