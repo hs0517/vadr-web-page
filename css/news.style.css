@@ -1,0 +1,109 @@
+.news {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5% 7.5%;
+}
+
+.news h1 {
+    text-align: left;
+    font-weight: bold;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    padding: 2.5% 0%;
+}
+
+.contents {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    padding-bottom: 2.5%;
+}
+
+.news_box {
+    overflow: auto;
+    height: 60vh;
+    border: solid 1.3px #000000;
+}
+
+.news-list {
+    list-style: none outside;
+    margin: 0;
+    padding: 0;
+}
+
+.news-list .item a {
+    display: flex;
+    /* flex-wrap: wrap;
+    flex-wrap: nowrap; */
+    text-decoration: none;
+    color: #333;
+    border-bottom: 1px solid #CCC;
+    padding: 20px 20px;
+}
+
+.news-list .item:first-child a {
+    border-top: 1px solid #CCC;
+}
+
+.news-list .item .date {
+    margin: 0;
+    min-width: 140px;
+    font-size: 16px;
+    color: #999;
+    padding: 0 20px 0 0;
+}
+
+.news-list .item .category {
+    margin: 0;
+    min-width: 140px;
+    padding: 0 20px 0 0;
+}
+
+.news-list .item .category span {
+    background: #999;
+    color: #FFF;
+    text-align: center;
+    display: inline-block;
+    padding: 5px 20px;
+    font-size: 12px;
+    line-height: 1;
+}
+
+.news-list .item .title {
+    margin: 0;
+    width: 100%;
+}
+
+.news-list .item a:hover .title {
+    color: rgb(183, 59, 14);
+}
+
+@media screen and (max-width: 767px) {
+    .news-list .item a {
+        flex-wrap: wrap;
+    }
+
+    .news-list .item .date {
+        min-width: 100px;
+    }
+
+    .news-list .item .title {
+        margin-top: 10px;
+    }
+}
+
+/* 装飾 */
+
+* {
+    box-sizing: border-box;
+}
+
+/* a{
+    text-decoration: none;
+}
+
+body{
+    margin: 20px;
+} */

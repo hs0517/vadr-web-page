@@ -1,0 +1,163 @@
+<!--
+    コードが冗長すぎるので，暇な時簡略化
+    ・ヘッダーやフッターなどの共通要素をまとめる
+    ・ニュースコンテンツのHTMLファイルの一元管理(jsのreplaceメソッドで内容を変えるなど)
+-->
+
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VADR Lab</title>
+    <link rel="stylesheet" href="./css/common.style.css" type="text/css">
+    <link rel="stylesheet" href="./css/main.style.css" type="text/css">
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="./css/slider-pro.css" media="screen" />
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet" />
+    <!--[if lt IE 9]>
+    <script src="/js/respond.min.js"></script>
+    <script src="/js/html5shiv.js"></script>
+    <![endif]-->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="./js/jquery.sliderPro.min.js"></script>
+    <script type="text/javascript" src="./js/footerFixed.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="./js/hamburger.js"></script>
+</head>
+
+<body>
+    <script src="./js/jquery.sliderPro.min.js"></script>
+    <script>
+        $(document).ready(function ($) {
+            $('#caption').sliderPro({
+                width: '100%',
+                aspectRatio: 3,
+                arrows: true,
+                responsive: true,
+            });
+        });
+    </script>
+
+    <header id="header"></header>
+
+    <div id="main">
+        <div id="caption" class="slider-pro">
+            <div class="sp-slides">
+
+                <div class="sp-slide">
+                    <a href="./beam.html"><img class="sp-image" src="./img/beam-slider.jpg" /></a>
+                    <p class="sp-layer sp-black sp-padding" data-position="bottomRight">
+                        BEAm: Bus Engagement AMplified
+                    </p>
+                </div>
+
+                <div class="sp-slide">
+                    <a href="./DDrPP.html"><img class="sp-image" src="./img/DDrPP-slider.jpg" /></a>
+                    <p class="sp-layer sp-black sp-padding" data-position="bottomRight">
+                        DDrPP: Data Dressing and Prompted Physicality
+                    </p>
+                </div>
+
+                <div class="sp-slide">
+                    <a href="./ditto.html"><img class="sp-image" src="./img/ditto-slider.jpg" /></a>
+                    <p class="sp-layer sp-black sp-padding" data-position="bottomRight">
+                        DITTO: Digital Instruments and Tangibles Theater Orchestrated
+                    </p>
+                </div>
+
+                <div class="sp-slide">
+                    <a href="./halo.html"><img class="sp-image" src="./img/HALO-Browser.png" /></a>
+                    <p class="sp-layer sp-black sp-padding" data-position="bottomRight">
+                        HALO: History-based Augmenting Learning Opportunities
+                    </p>
+                </div>
+
+                <div class="sp-slide">
+                    <a href="./lyricbathe.html"><img class="sp-image" src="./img/lyricbathe-slider.jpg" /></a>
+                    <p class="sp-layer sp-black sp-padding" data-position="bottomRight">
+                        LyricBathe
+                    </p>
+                </div>
+
+                <div class="sp-slide">
+                    <a href="./mavenread.html"><img class="sp-image" src="./img/mavenread-slider.jpg" /></a>
+                    <p class="sp-layer sp-black sp-padding" data-position="bottomRight">
+                        MAVenRead: MR, AR and VR for Experiencing Novel Read
+                    </p>
+                </div>
+
+                <div class="sp-slide">
+                    <a href="./tciex.html"><img class="sp-image" src="./img/tciex-slider.jpg" /></a>
+                    <p class="sp-layer sp-black sp-padding" data-position="bottomRight">
+                        TCieX curate
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="container-contents">
+
+            <aside id="sidemenu" class="sidemenu"></aside>
+
+            <div class="contents">
+
+                <div class="introduction">
+                    <h1>
+                        <font size="+4" face="Georgia"><i>VADR lab. </i></font>
+                        <font size="+2" face="Georgia">Viable Artifact Design Research </font>
+                        <font size="+2">(ゔぇいだぁ・らぼらとり)</font>
+                    </h1>
+                    <p>VADR
+                        lab.では、可視化環境やインタラクティブなアプリケーションシステムによる、ドキドキ、ワクワクする体験や、だったらこうだな、こうすればもっといいかもと思考する体験の、創出とその仕組みについての研究を行っています。
+                        <br>
+                        私たちが研究として取り組むのは、〈人〉と〈ソフトウェアシステム〉とで構成される系の在り方です。人が使う道具としてソフトウェアシステムをデザインし実装する技術や、人を取り巻く環境としてソフトウェアシステムを実現するための構想について探求します。
+                    </p>
+                    <ul>
+                        <li>
+                            <h3>研究課題のアプローチ</h3>
+                        </li>
+                        <ol>
+                            <li>ソフトウェア技術：人の入力に合わせて動的に変化する視覚表現を創出するような、〈ソフトウェアシステム〉を構築する技術</li>
+                            <li>認知科学：知覚や認識の特性や思考のプロセスや創造性の発現といった、〈人〉についての認知科学的な解明</li>
+                        </ol>
+
+
+                        <li>
+                            <h3>考え方のベース</h3>
+                        </li>
+                        <ol>
+                            <li>人は使う道具や環境で思考や振る舞いが変化する</li>
+                            <li>人と環境とは相互に依存する</li>
+                            <li>結果として人と環境の関係性は変化し続ける</li>
+                        </ol>
+                    </ul>
+                </div>
+
+                <section id="js-projects" class="projects">
+                    <template id="js-project">
+                        <div class="project">
+                            <img src="" class="js-project-img">
+                            <h3 class="js-project-name"></h3>
+                            <p class="js-project-summary"></p>
+                            <div class="square"><a class="link" href=""></a></div>
+                        </div>
+                    </template>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <footer id="footer"></footer>
+
+    <!--js-->
+    <script src="./js/include.js"></script>
+    <script src="./js/scroll.js"></script>
+    <script src="./js/projectsList.js"></script>
+    <script src="./js/projects.js"></script>
+</body>
+
+</html>

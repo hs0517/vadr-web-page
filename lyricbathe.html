@@ -1,0 +1,102 @@
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VADR Lab</title>
+    <link rel="stylesheet" href="./css/common.style.css" type="text/css">
+    <link rel="stylesheet" href="./css/main.style.css" type="text/css">
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="./css/slider-pro.css" media="screen">
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src="/js/respond.min.js"></script>
+    <script src="/js/html5shiv.js"></script>
+    <![endif]-->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="./js/jquery.sliderPro.min.js"></script>
+    <script type="text/javascript" src="./js/footerFixed.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="./js/hamburger.js"></script>
+</head>
+
+<body>
+    <header id="header"></header>
+
+    <div class="container">
+        <img src="./img/LyricBathe_header.png" />
+        <p>LyricBathe</p>
+    </div>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="jquery.sliderPro.min.js"></script>
+    <script>
+        $(document).ready(function ($) {
+            $('#caption').sliderPro({
+                autoScaleLayers: false,
+                waitForLayers: false,
+                width: '100%',
+                autoplay: true,
+                arrows: true,
+                buttons: true,
+                aspectRatio: 3,
+                forceSize: 'fullWidth',
+                slideDistance: 0,
+            });
+        });
+
+    </script>
+
+    <div class="container-contents">
+
+        <aside id="sidemenu" class="sidemenu"></aside>
+
+        <div class="project-introduction">
+            <h1>
+                <font size="+4">LyricBathe</font>
+            </h1>
+            <p>
+                本研究プロジェクトでは、「MR(複合現実)技術を用いたインタラクティブな歌詞体験の創出」をテーマとして研究を行っている。
+            </p>
+            <div class="video-container-large">
+                <div class="video">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/jqzem_DEVNE?si=-pzF1Ma4UyyXh86j"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+            <h3>歌詞体験MR環境: LyricBathe</h3>
+            MR技術を用いた歌詞体験システムとして、LyricBatheを開発している。<br />
+            LyricBatheは、日常的な音楽鑑賞の環境で歌詞をより深く楽しむというアイデアを基に、革新的かつインタラクティブな音楽体験を提供するMRシステムである。<br />
+            本システムでは、光学透過式ヘッドマウントディスプレイ(HoloLens
+            2)を用いたMR環境において、楽曲の進行と同期して歌詞を文字ごとにオブジェクトとして表示し、ユーザーの身体的動作や周囲の物理環境とのインタラクションを通じて、歌詞に「浸る」音楽体験の実現を目指している。<br />
+            LyricBatheでは、MR技術を用いて物理空間に歌詞がオブジェクトとして現れるように表現することで、ユーザは歌詞を空間的に体験できるだけでなく、「歌詞に手で触れる」「身体から歌詞が飛び出る」「歌詞をシャワーのように浴びる」といった身体的なインタラクションを通じて、歌詞を新たな形で楽しむことができる。<br />
+            LyricBatheが創出する歌詞体験において、ユーザがどのような箇所に注目しながら音楽を体験しているかを調査するため、注視箇所の分析を実施した。HoloLens
+            2のアイトラッキング機能を用い、8種類のビジュアルインタラクティビティモードにおける音楽体験中の注視箇所を計測し、注視対象となるオブジェクトごとに注視箇所を分類して、音楽体験における注視行動を分析した。<br />
+            反復的な開発を重ね、24種類のビジュアルインタラクティビティモードを実装している。この24のモードからMR環境における歌詞表現を定義する12個のデザインプリミティブを抽出し、空間配置、文字表示のタイミング、ユーザインタラクションの種類といった要素を特定した。<br />
+            <h3>発表実績</h3>
+            <ul>
+                <li>小島颯英, 中小路久美代, 加藤淳, MR環境LyricBatheにおけるインタラクティブな歌詞表現のデザインスペースの創出, 信学技報, HCS2024-79,HIP2024-80
+                    (2025-01), pp.78-83, 電子情報通信学会, Ibaraki, Osaka, January 25th, 2025.</li>
+                <li>小島 颯英，柏木 敏朗，中小路 久美代，MR環境での楽曲と同期した歌詞表示におけるユーザの注視箇所の分析，情報処理学会，ヒューマンコンピュータインタラクション研究会，
+                    Vol.2024-HCI-209, No.20, pp.1-7, Sapporo, July 23, 2024.</li>
+                <li>小島 颯英，中小路 久美代，インタラクティブなMR環境LyricBatheによる歌詞に浸る体験，インタラクション2024論文集，情報処理学会，1A-14, pp.241-246, Tokyo, Mar
+                    7, 2024.</li>
+            </ul>
+        </div>
+    </div>
+
+    <footer id="footer"></footer>
+
+    <!--js-->
+    <script src="js/include.js"></script>
+
+
+    <div style="visibility: hidden; position: absolute; top: 0px;">S</div><iframe id="P2ZlbfDN" frameborder="0"
+        src="chrome-extension://ekhagklcjbdpajgpjgmbionohlpdbjgc/translateSandbox/translateSandbox.html"
+        style="width: 0px; height: 0px; display: none;"></iframe>
+</body>
+
+</html>
