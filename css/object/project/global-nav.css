@@ -11,6 +11,24 @@
     font-weight: bold;
 }
 
+/* パネルが開く項目であることを示す下向き矢印。開いている間は上向きになる */
+.p-global-nav__toggle::after {
+    content: "";
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    margin-left: 0.6em;
+    border-right: 2px solid #ffffff;
+    border-bottom: 2px solid #ffffff;
+    transform: translateY(-25%) rotate(45deg);
+    vertical-align: middle;
+    transition: transform 0.25s ease;
+}
+
+.p-global-nav__toggle[aria-expanded="true"]::after {
+    transform: translateY(25%) rotate(-135deg);
+}
+
 @media screen and (min-width: 769px) {
     .p-global-nav {
         height: 100%;
@@ -81,20 +99,5 @@
         justify-content: center;
         width: 100%;
         padding: 15px 0;
-    }
-
-    .p-global-nav__toggle::after {
-        content: "";
-        width: 7px;
-        height: 7px;
-        margin-left: 0.6em;
-        border-right: 2px solid #ffffff;
-        border-bottom: 2px solid #ffffff;
-        transform: rotate(45deg);
-        transition: transform 0.25s ease;
-    }
-
-    .p-global-nav__toggle[aria-expanded="true"]::after {
-        transform: rotate(-135deg);
     }
 }
