@@ -1,8 +1,10 @@
 // data/news.json のニュースを表示する
 // - #js-news-list   : 新しい順の一覧。data-limit があればその件数だけ表示（トップページ）
 // - #js-news-detail : URL の ?id= に対応する1件を表示（news-detail.html）
+// 英語ページ（<html lang="en">）では、各記事の en の項目で日本語の項目を上書きして表示する
 (function () {
     const DATA_URL = '/data/news.json';
+    const isEn = document.documentElement.lang === 'en';
 
     // 要素を作って class とテキストを設定する（テキストは textContent で入れる）
     function el(tag, className, text) {
@@ -22,7 +24,12 @@
     }
 
     function detailUrl(news) {
-        return '/news-detail.html?id=' + encodeURIComponent(news.id);
+        return (isEn ? '/en' : '') + '/news-detail.html?id=' + encodeURIComponent(news.id);
+    }
+
+    // 表示する言語の内容にする（英語訳がない記事は日本語のまま表示する）
+    function localize(news) {
+        return isEn && news.en ? Object.assign({}, news, news.en) : news;
     }
 
     function loadNews() {
@@ -35,7 +42,7 @@
             })
             .then(function (list) {
                 // 日付の新しい順。同じ日付ならファイル内の順番を保つ
-                return list.slice().sort(function (a, b) {
+                return list.map(localize).sort(function (a, b) {
                     return b.date.localeCompare(a.date);
                 });
             });
@@ -66,7 +73,7 @@
         });
 
         if (!news) {
-            container.appendChild(el('p', 'p-news-detail__message', '記事が見つかりませんでした。'));
+            container.appendChild(el('p', 'p-news-detail__message', isEn ? 'Article not found.' : '記事が見つかりませんでした。'));
             return;
         }
 

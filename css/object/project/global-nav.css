@@ -11,6 +11,11 @@
     font-weight: bold;
 }
 
+/* 言語切り替え（English / 日本語） */
+.p-global-nav__link--lang {
+    font-weight: normal;
+}
+
 /* パネルが開く項目であることを示す下向き矢印。開いている間は上向きになる */
 .p-global-nav__toggle::after {
     content: "";

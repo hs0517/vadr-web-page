@@ -27,6 +27,12 @@
             .then(function (html) {
                 el.innerHTML = html;
                 markCurrentLinks(el);
+                // 言語切り替えリンクの遷移先を、今のページのもう一方の言語版にする（lang.js）
+                if (window.VadrLang) {
+                    el.querySelectorAll('.js-lang-switch').forEach(function (link) {
+                        link.href = window.VadrLang.counterpartUrl();
+                    });
+                }
             })
             .catch(function (err) {
                 console.error('共通パーツの読み込みに失敗しました:', err);

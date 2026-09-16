@@ -15,10 +15,11 @@ python3 -m http.server 8000
 
 ```
 .
-├── *.html                 各ページ（公開URLを変えないためルートに置く）
+├── *.html                 日本語ページ（公開URLを変えないためルートに置く）
+├── en/                    英語ページ（日本語ページと同じファイル名・同じ構成）
 ├── data/news.json         ニュース記事のデータ
 ├── members/               メンバー個人ページ
-├── include/               共通パーツ（header / footer / sidebar）
+├── include/               共通パーツ（header / footer / sidebar）。英語版は include/en/
 ├── css/
 │   ├── style.css          エントリーポイント（各ファイルを @import する）
 │   ├── foundation/        reset.css, base.css
@@ -29,6 +30,7 @@ python3 -m http.server 8000
 │   │   └── utility/       u-*  1つのプロパティだけを上書きする補助クラス
 │   └── vendor/            外部ライブラリ（slider-pro.css はサイト向けに調整済み）
 ├── js/
+│   ├── lang.js            言語設定に応じた日本語/英語ページへのリダイレクトと、言語切り替え
 │   ├── include.js         data-include のパーツを読み込み、現在ページのリンクに is-current を付ける
 │   ├── global-nav.js      ハンバーガーメニュー / Researchパネルの開閉
 │   ├── projects-data.js   トップページのプロジェクト一覧データ
@@ -39,6 +41,18 @@ python3 -m http.server 8000
 ├── img_assets/            ロゴ・スライダー・サムネイル・ニュース画像
 └── img_members/           メンバーの顔写真
 ```
+
+## 日本語ページと英語ページ
+
+- 日本語ページは `/beam.html`、英語ページは `/en/beam.html` のように、同じファイル名で対応させます。
+  ページを追加・削除するときは、必ず両方の言語で行ってください（片方がないと言語切り替えやリダイレクトで404になります）。
+- 各ページの `<head>` では、最初に `js/lang.js` を（defer なしで）読み込みます。
+  - 保存された言語設定、なければブラウザの言語設定（日本語以外は英語）に合わせて、もう一方の言語のページへ移動します。
+  - ヘッダーの「English / 日本語」で切り替えると、その言語が保存され、以後はそちらが優先されます。
+  - 検索エンジンのクローラーはリダイレクトしません。
+- `<link rel="alternate" hreflang="…">` で、検索エンジンに対応する言語版のURLを伝えています。ページを追加したら同じように書いてください。
+- 英語ページは `<html lang="en">` にし、共通パーツは `data-include="/include/en/…"` を読み込みます。
+- データの英語訳: `js/projects-data.js` は `summaryEn`、`data/news.json` は各記事の `en` に書きます。
 
 ## ニュースの追加方法
 
@@ -59,7 +73,15 @@ python3 -m http.server 8000
     ],
     "links": [
         { "label": "参照ページ", "url": "https://example.com/" }
-    ]
+    ],
+    "en": {
+        "category": "Presentation",
+        "title": "We gave a presentation at XX",
+        "body": ["English paragraph"],
+        "links": [
+            { "label": "Event page", "url": "https://example.com/" }
+        ]
+    }
 }
 ```
 
@@ -72,6 +94,7 @@ python3 -m http.server 8000
 | `body` | ○ | 本文。1要素が1段落 |
 | `image`, `imageAlt` |  | 画像は `img_assets/news/` に置く。省略すると本文だけの表示になる |
 | `links` |  | 本文の下にボタンとして表示するリンク |
+| `en` |  | 英語ページ用。`category` / `title` / `body` / `links` / `imageAlt` を書いた項目だけ上書きする。省略すると英語ページにも日本語のまま表示される |
 
 JSONは最後の要素の後ろにカンマを付けるとエラーになり、ニュースが1件も表示されなくなるので注意してください。
 
