@@ -1,0 +1,166 @@
+/* メンバー紹介ページ */
+.p-members {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+}
+
+.p-members__section {
+    display: flex;
+    flex-direction: column;
+}
+
+.p-members__section--faculty {
+    margin-bottom: 1.15em;
+}
+
+.p-members__heading {
+    /* h1 自身の文字サイズ(2em)基準で 16px */
+    margin-block: 0.5em;
+    border-bottom: 1px solid #000000;
+    font-weight: normal;
+    text-align: left;
+}
+
+/* 教員 */
+.p-members__faculty {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.p-members__faculty:first-of-type {
+    margin-bottom: 30px;
+}
+
+.p-members__faculty-info {
+    height: 100%;
+    line-height: 0.5em;
+}
+
+.p-members__faculty-name {
+    font-size: 2.2em;
+}
+
+.p-members__faculty-text {
+    line-height: 1.5em;
+    text-align: justify;
+}
+
+/* 学生 */
+.p-members__student-img {
+    width: 100%;
+    margin: auto;
+}
+
+.p-members__student-name-en {
+    margin-block: 0.1em 0;
+}
+
+.p-members__student-text {
+    width: 100%;
+}
+
+.p-members__grade {
+    font-size: small;
+}
+
+@media screen and (min-width: 769px) {
+    .p-members__section {
+        width: 60%;
+        padding-top: 10px;
+    }
+
+    .p-members__section--student {
+        margin-bottom: 30px;
+    }
+
+    .p-members__faculty:first-of-type {
+        margin-top: 15px;
+    }
+
+    .p-members__faculty-img {
+        width: 22.5%;
+        height: 20%;
+        padding-right: 8%;
+    }
+
+    .p-members__faculty:first-of-type .p-members__faculty-img {
+        padding-right: 10%;
+    }
+
+    .p-members__faculty-info {
+        width: 65%;
+        font-size: 1vw;
+    }
+
+    .p-members__student-list {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        justify-content: center;
+        gap: 3vw;
+    }
+
+    .p-members__student-img {
+        height: 15vw;
+        object-fit: cover;
+    }
+
+    .p-members__student-name {
+        margin-block: 0.5em 0;
+        font-size: 1.5vw;
+    }
+
+    .p-members__student-name-en {
+        font-size: 1vw;
+    }
+
+    .p-members__student-text {
+        font-size: 1vw;
+        line-height: 1;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .p-members__section {
+        width: 90%;
+    }
+
+    .p-members__section--student {
+        margin-bottom: 30px;
+    }
+
+    .p-members__faculty-img {
+        width: 45%;
+        height: 45%;
+    }
+
+    .p-members__faculty-info {
+        display: table-cell;
+        width: 50%;
+        font-size: 3.3vw;
+    }
+
+    .p-members__student-list {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .p-members__student {
+        width: 45%;
+    }
+
+    .p-members__student-img {
+        display: block;
+    }
+
+    .p-members__student-text {
+        margin-block-end: 2em;
+        text-align: justify;
+    }
+}

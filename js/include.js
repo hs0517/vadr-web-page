@@ -1,40 +1,35 @@
-//ヘッダーのインクルード
-const includeHeader = new XMLHttpRequest();
-includeHeader.open("GET", "/include/header.html", true);
-includeHeader.onreadystatechange = function () {
-    if (includeHeader.readyState === 4 && includeHeader.status === 200) {
-        const headerHTML = includeHeader.responseText;
-        const header = document.querySelector("#header");
-        header.insertAdjacentHTML("afterbegin", headerHTML);
+// data-include 属性で指定した共通パーツ（ヘッダー・フッター・サイドメニュー）を読み込んで挿入する
+(function () {
+    // "/beam.html" と "/beam"、"/index.html" と "/" を同じページとして扱う
+    function normalizePath(pathname) {
+        return pathname.replace(/\.html$/, '').replace(/\/index$/, '/');
     }
-};
-includeHeader.send();
 
-//フッターのインクルード
-const includeFooter = new XMLHttpRequest();
-includeFooter.open("GET", "/include/footer.html", true);
-includeFooter.onreadystatechange = function () {
-    if (includeFooter.readyState === 4 && includeFooter.status === 200) {
-        const footerHTML = includeFooter.responseText;
-        const footer = document.querySelector("#footer");
-        footer.insertAdjacentHTML("afterbegin", footerHTML);
+    // 挿入したパーツ内の、現在のページへのリンクに印を付ける
+    function markCurrentLinks(root) {
+        const current = normalizePath(location.pathname);
+        root.querySelectorAll('a[href]').forEach(function (link) {
+            if (normalizePath(link.pathname) === current) {
+                link.classList.add('is-current');
+                link.setAttribute('aria-current', 'page');
+            }
+        });
     }
-};
-includeFooter.send();
 
-//サイドメニューのインクルード
-const includeSideMenu = new XMLHttpRequest();
-includeSideMenu.open("GET", "/include/sidemenu.html", true);
-includeSideMenu.onreadystatechange = function () {
-    if (includeSideMenu.readyState === 4 && includeSideMenu.status === 200) {
-        const sideMenuHTML = includeSideMenu.responseText;
-        const sideMenu = document.querySelector("#sidemenu");
-        sideMenu.insertAdjacentHTML("afterbegin", sideMenuHTML);
-    }
-};
-includeSideMenu.send();
-
-//サイドメニュー中の該当ページ名を強調、リンクの無効化
-const elm = document.getElementById("sidemenu");
-var pathname = window.location.pathname.split("/").pop();
-elm.classList.add("sidemenu-" + pathname.substring(0, pathname.indexOf(".")));
+    document.querySelectorAll('[data-include]').forEach(function (el) {
+        fetch(el.dataset.include)
+            .then(function (res) {
+                if (!res.ok) {
+                    throw new Error(res.status + ' ' + res.url);
+                }
+                return res.text();
+            })
+            .then(function (html) {
+                el.innerHTML = html;
+                markCurrentLinks(el);
+            })
+            .catch(function (err) {
+                console.error('共通パーツの読み込みに失敗しました:', err);
+            });
+    });
+})();

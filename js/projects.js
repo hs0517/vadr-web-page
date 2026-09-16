@@ -1,17 +1,18 @@
-const project = document.getElementById("js-project");
+// トップページの研究プロジェクト一覧を、projects-data.js のデータからカードとして生成する
+(function () {
+    const template = document.getElementById('js-project-card-template');
+    const list = document.getElementById('js-project-list');
 
-for (let i = 0; i < projectsList.length; i++) {
-    // 定義したproject要素を複製する
-    const project_content = project.content.cloneNode(true);
+    projects.forEach(function (project) {
+        const card = template.content.cloneNode(true);
+        card.querySelector('.js-card-img').src = project.image;
+        card.querySelector('.js-card-title').textContent = project.name;
+        card.querySelector('.js-card-text').textContent = project.summary;
 
-    // 複製したproject要素にデータを挿入
-    project_content.querySelector(".js-project-img").src = projectsList[i].project_img;
-    project_content.querySelector(".js-project-name").textContent = projectsList[i].project_name;
-    project_content.querySelector(".js-project-summary").textContent =
-        projectsList[i].project_summary;
-    project_content.querySelector(".link").href =
-        projectsList[i].page_link;
+        const link = card.querySelector('.js-card-link');
+        link.href = project.url;
+        link.setAttribute('aria-label', project.name);
 
-    // #js-contentに追加
-    document.getElementById("js-projects").appendChild(project_content);
-}
+        list.appendChild(card);
+    });
+})();

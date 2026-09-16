@@ -1,0 +1,39 @@
+/* =========================================
+   エントリーポイント（FLOCSS）
+   読み込み順: Foundation -> Layout -> Object(Component -> Project -> Utility)
+   ========================================= */
+
+/* Foundation */
+@import url("foundation/reset.css");
+@import url("foundation/base.css");
+
+/* Layout */
+@import url("layout/header.css");
+@import url("layout/footer.css");
+@import url("layout/main.css");
+@import url("layout/sidebar.css");
+
+/* Object - Component */
+@import url("object/component/logo.css");
+@import url("object/component/hamburger.css");
+@import url("object/component/close-button.css");
+@import url("object/component/page-title.css");
+@import url("object/component/section-title.css");
+@import url("object/component/hero.css");
+@import url("object/component/card.css");
+@import url("object/component/video.css");
+@import url("object/component/button.css");
+
+/* Object - Project */
+@import url("object/project/global-nav.css");
+@import url("object/project/research-panel.css");
+@import url("object/project/top.css");
+@import url("object/project/research.css");
+@import url("object/project/news.css");
+@import url("object/project/news-detail.css");
+@import url("object/project/members.css");
+@import url("object/project/member-profile.css");
+@import url("object/project/publication.css");
+
+/* Object - Utility */
+@import url("object/utility/utility.css");

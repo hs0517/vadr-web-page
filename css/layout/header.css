@@ -1,0 +1,39 @@
+.l-header {
+    width: 100%;
+    background: #000000;
+    z-index: 999;
+}
+
+.l-header__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.l-header__logo {
+    margin-left: 5em;
+}
+
+@media screen and (min-width: 769px) {
+    .l-header {
+        height: 6.5vw;
+    }
+
+    .l-header__inner {
+        height: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .l-header {
+        display: flex;
+        position: sticky;
+        top: 0;
+        height: 80px;
+    }
+
+    .l-header__inner {
+        max-width: 900px;
+    }
+}

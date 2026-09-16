@@ -1,0 +1,33 @@
+/* メンバー個人ページ */
+.p-member-profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-inline: auto;
+    padding: 5rem;
+}
+
+.p-member-profile__img {
+    width: 100px;
+    height: 100px;
+    clip-path: circle(50%);
+}
+
+.p-member-profile__link {
+    color: #234ab5;
+    font-size: 12px;
+    text-decoration-line: underline;
+}
+
+.p-member-profile__publications {
+    margin-block: 1.67em;
+    font-size: 0.83em;
+    font-weight: bold;
+}
+
+@media screen and (min-width: 960px) {
+    .p-member-profile {
+        width: 50%;
+    }
+}

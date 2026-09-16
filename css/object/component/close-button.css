@@ -1,0 +1,23 @@
+/* ×アイコンの閉じるボタン */
+.c-close-button {
+    position: relative;
+    width: 26px;
+    height: 26px;
+}
+
+.c-close-button__bar {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #ffffff;
+}
+
+.c-close-button__bar:nth-child(1) {
+    transform: rotate(45deg);
+}
+
+.c-close-button__bar:nth-child(2) {
+    transform: rotate(-45deg);
+}

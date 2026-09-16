@@ -1,0 +1,27 @@
+/* トップページ */
+.p-top__list {
+    margin-bottom: 20px;
+}
+
+@media screen and (min-width: 769px) {
+    .p-top__projects {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        /* gapを%で指定すると高さが認識されないので注意 */
+        gap: 2.5em;
+        padding: 5% 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .p-top__intro {
+        width: 80%;
+    }
+
+    .p-top__projects {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        margin-top: 100px;
+    }
+}

@@ -1,0 +1,7 @@
+/* News一覧・News詳細ページの見出し */
+.c-section-title {
+    margin-block: 0;
+    padding: 2.5% 0;
+    font-weight: bold;
+    text-align: left;
+}

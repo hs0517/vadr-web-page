@@ -1,0 +1,13 @@
+/* トップページ・研究プロジェクトページの見出し（名称 + 正式名称） */
+.c-page-title {
+    border-bottom: solid 1px #a9a9a9;
+    line-height: 2em;
+}
+
+.c-page-title__main {
+    font-size: xxx-large;
+}
+
+.c-page-title__sub {
+    font-size: x-large;
+}

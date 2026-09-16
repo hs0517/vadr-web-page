@@ -1,0 +1,28 @@
+/* 対外発表一覧ページ */
+.p-publication {
+    display: flex;
+    flex-direction: column;
+    margin: 5%;
+}
+
+.p-publication__heading {
+    font-weight: normal;
+    text-align: left;
+}
+
+.p-publication__list {
+    margin: 0;
+    padding: 0;
+    line-height: 1.8em;
+}
+
+.p-publication__item {
+    padding-block: 10px;
+    font-size: 0.8rem;
+    list-style: decimal inside;
+    text-align: justify;
+}
+
+.p-publication__link {
+    color: #000000;
+}

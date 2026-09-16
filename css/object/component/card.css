@@ -1,0 +1,75 @@
+/* 画像・タイトル・概要をもつリンクカード。カード全体が __link で覆われる */
+.c-card {
+    position: relative;
+    width: 100%;
+    box-shadow: rgba(122, 122, 122, 0.0588235) 0px 0px 6px 3px;
+}
+
+.c-card__img {
+    width: 100%;
+    aspect-ratio: 5 / 3;
+    object-fit: cover;
+}
+
+.c-card__text {
+    text-align: justify;
+}
+
+.c-card__link {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+@media screen and (min-width: 769px) {
+    .c-card {
+        height: 100%;
+    }
+
+    .c-card__title {
+        position: relative;
+        margin: 0;
+        padding: 5%;
+    }
+
+    .c-card__title::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        width: 90%;
+        height: 1px;
+        transform: translateX(-50%);
+        background-color: #a9a9a9;
+    }
+
+    .c-card__text {
+        aspect-ratio: 2.5;
+        margin: 0;
+        padding: 5%;
+    }
+
+    .c-card__link {
+        background-color: #000000;
+        opacity: 0;
+        transition: 0.3s;
+    }
+
+    .c-card__link:hover {
+        opacity: 0.1;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .c-card {
+        margin: 0 auto 30px;
+    }
+
+    .c-card__title,
+    .c-card__text {
+        padding: 0 15px;
+    }
+}

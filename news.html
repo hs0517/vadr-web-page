@@ -3,79 +3,69 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>News</title>
-    <link rel="stylesheet" href="./css/common.style.css" type="text/css">
-    <link rel="stylesheet" href="./css/news.style.css" type="text/css">
-    <script src="./js/jquery-3.6.0.min.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script type="text/javascript" src="./js/footerFixed.js"></script>
-    <script type="text/javascript" src="./js/hamburger.js"></script>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/include.js" defer></script>
+    <script src="/js/global-nav.js" defer></script>
 </head>
 
 <body>
-    <!-- <script src="./components/header.js"></script>
-    <script src="./components/navigation.js"></script> -->
+    <header class="l-header" data-include="/include/header.html"></header>
 
-    <header id="header"></header>
-
-    <div class="news">
-        <div class="contents">
-            <h1>News</h1>
-            <div class="news_box">
-                <ul class="news-list">
-                    <li class="item">
-                        <a href="./news_contents_2023-04-06.html">
-                            <p class="date">2023/04/06</p>
-                            <p class="category"><span>学内イベント</span></p>
-                            <p class="title">コース別オリエンテーションで研究室紹介をおこないました</p>
+    <main class="l-main">
+        <div class="p-news">
+            <h1 class="c-section-title">News</h1>
+            <div class="p-news__box">
+                <ul class="p-news__list">
+                    <li class="p-news__item">
+                        <a class="p-news__link" href="./news_contents_2023-04-06.html">
+                            <p class="p-news__date">2023/04/06</p>
+                            <p class="p-news__category"><span class="p-news__category-label">学内イベント</span></p>
+                            <p class="p-news__title">コース別オリエンテーションで研究室紹介をおこないました</p>
                         </a>
                     </li>
-                    <li class="item">
-                        <a href="./news_contents_2023-03-22.html">
-                            <p class="date">2023/03/22</p>
-                            <p class="category"><span>日常</span></p>
-                            <p class="title">M2 横濱拓樹さん、B4 菊村苑香さん、B4 時兼隆祐さん、ご卒業おめでとうございます！</p>
+                    <li class="p-news__item">
+                        <a class="p-news__link" href="./news_contents_2023-03-22.html">
+                            <p class="p-news__date">2023/03/22</p>
+                            <p class="p-news__category"><span class="p-news__category-label">日常</span></p>
+                            <p class="p-news__title">M2 横濱拓樹さん、B4 菊村苑香さん、B4 時兼隆祐さん、ご卒業おめでとうございます！</p>
                         </a>
                     </li>
-                    <li class="item">
-                        <a href="./news_contents_2023-03-13.html">
-                            <p class="date">2023/03/13</p>
-                            <p class="category"><span>研究発表</span></p>
-                            <p class="title">第202回HCI研究会で発表しました</p>
+                    <li class="p-news__item">
+                        <a class="p-news__link" href="./news_contents_2023-03-13.html">
+                            <p class="p-news__date">2023/03/13</p>
+                            <p class="p-news__category"><span class="p-news__category-label">研究発表</span></p>
+                            <p class="p-news__title">第202回HCI研究会で発表しました</p>
                         </a>
                     </li>
-                    <li class="item">
-                        <a href="./news_contents_2023-03-10.html">
-                            <p class="date">2023/03/10</p>
-                            <p class="category"><span>研究発表</span></p>
-                            <p class="title">INTERACTION2023でインタラクティブ発表をおこないました</p>
+                    <li class="p-news__item">
+                        <a class="p-news__link" href="./news_contents_2023-03-10.html">
+                            <p class="p-news__date">2023/03/10</p>
+                            <p class="p-news__category"><span class="p-news__category-label">研究発表</span></p>
+                            <p class="p-news__title">INTERACTION2023でインタラクティブ発表をおこないました</p>
                         </a>
                     </li>
-                    <li class="item">
-                        <a href="./news_contents_2023-03-03.html">
-                            <p class="date">2023/03/03</p>
-                            <p class="category"><span>研究発表</span></p>
-                            <p class="title">第85回情報処理学会全国大会で発表しました</p>
+                    <li class="p-news__item">
+                        <a class="p-news__link" href="./news_contents_2023-03-03.html">
+                            <p class="p-news__date">2023/03/03</p>
+                            <p class="p-news__category"><span class="p-news__category-label">研究発表</span></p>
+                            <p class="p-news__title">第85回情報処理学会全国大会で発表しました</p>
                         </a>
                     </li>
-                    <li class="item">
-                        <a href="./news_contents_2023-03-01.html">
-                            <p class="date">2023/03/01</p>
-                            <p class="category"><span>お知らせ</span></p>
-                            <p class="title">研究室サイトを立ち上げました！</p>
+                    <li class="p-news__item">
+                        <a class="p-news__link" href="./news_contents_2023-03-01.html">
+                            <p class="p-news__date">2023/03/01</p>
+                            <p class="p-news__category"><span class="p-news__category-label">お知らせ</span></p>
+                            <p class="p-news__title">研究室サイトを立ち上げました！</p>
                         </a>
                     </li>
                 </ul>
             </div>
         </div>
-    </div>
+    </main>
 
-    <footer id="footer"></footer>
-
-    <!--js-->
-    <script src="./js/include.js"></script>
+    <footer class="l-footer" data-include="/include/footer.html"></footer>
 </body>
 
 </html>
