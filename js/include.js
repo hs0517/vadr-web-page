@@ -24,7 +24,7 @@ includeFooter.send();
 
 //サイドメニューのインクルード
 const includeSideMenu = new XMLHttpRequest();
-includeSideMenu.open("GET", "/include/sidemenu.html", true);
+includeSideMenu.open("GET", "/include/sidebar.html", true);
 includeSideMenu.onreadystatechange = function () {
     if (includeSideMenu.readyState === 4 && includeSideMenu.status === 200) {
         const sideMenuHTML = includeSideMenu.responseText;
