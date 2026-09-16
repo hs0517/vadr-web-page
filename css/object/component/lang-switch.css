@@ -1,0 +1,11 @@
+/* 言語切り替えリンク。グローバルナビとは別に、ヘッダーの右端に置く */
+.c-lang-switch {
+    color: #ffffff;
+    font-size: 14px;
+    white-space: nowrap;
+    transition: opacity 0.2s;
+}
+
+.c-lang-switch:hover {
+    opacity: 0.7;
+}

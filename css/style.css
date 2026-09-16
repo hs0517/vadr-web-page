@@ -24,6 +24,7 @@
 @import url("object/component/news-list.css");
 @import url("object/component/video.css");
 @import url("object/component/button.css");
+@import url("object/component/lang-switch.css");
 
 /* Object - Project */
 @import url("object/project/global-nav.css");

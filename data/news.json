@@ -6,7 +6,14 @@
         "title": "コース別オリエンテーションで研究室紹介をおこないました",
         "body": [
             "コース別オリエンテーションで研究室紹介を行いました。"
-        ]
+        ],
+        "en": {
+            "category": "Campus Event",
+            "title": "We introduced our lab at the course orientation",
+            "body": [
+                "We introduced our lab at the course orientation."
+            ]
+        }
     },
     {
         "id": "2023-03-22",
@@ -17,7 +24,15 @@
         "body": [
             "当研究室所属のM2 横濱拓樹さん、B4 菊村苑香さん、B4 時兼隆祐さんがご卒業されました。おめでとうございます！今後のご活躍をお祈り申し上げます。",
             "B4 時兼隆祐さんは公立はこだて未来大学大学院に進みます。"
-        ]
+        ],
+        "en": {
+            "category": "Lab Life",
+            "title": "Congratulations on your graduation, Hiroki Yokohama (M2), Sonoka Kikumura (B4), and Takahiro Tokikane (B4)!",
+            "body": [
+                "Hiroki Yokohama (M2), Sonoka Kikumura (B4), and Takahiro Tokikane (B4) of our lab have graduated. Congratulations! We wish them every success in the future.",
+                "Takahiro Tokikane (B4) will continue on to the graduate school of Future University Hakodate."
+            ]
+        }
     },
     {
         "id": "2023-03-13",
@@ -30,7 +45,18 @@
         ],
         "links": [
             { "label": "参照ページ", "url": "http://www.sighci.jp/events/sig/202" }
-        ]
+        ],
+        "en": {
+            "category": "Presentation",
+            "title": "We gave a presentation at the 202nd SIG-HCI meeting",
+            "body": [
+                "Jou Watabe (M1) gave a research presentation at the 202nd meeting of the IPSJ Special Interest Group on Human-Computer Interaction (SIG-HCI).",
+                "渡部丈, 山本恭裕, 中小路久美代, プログラミングに伴う多様な活動の履歴をブラウジングする環境HALO-Browserのデザインと試作, 情報処理学会研究報告,Vol.2023-HCI-202, No.5, pp.1-7, Tokyo, Japan, March 13-15, 2023. (in Japanese)"
+            ],
+            "links": [
+                { "label": "Event page", "url": "http://www.sighci.jp/events/sig/202" }
+            ]
+        }
     },
     {
         "id": "2023-03-10",
@@ -42,7 +68,17 @@
         ],
         "links": [
             { "label": "参照ページ", "url": "https://www.interaction-ipsj.org/2023/" }
-        ]
+        ],
+        "en": {
+            "category": "Presentation",
+            "title": "We gave interactive presentations at INTERACTION 2023",
+            "body": [
+                "Toshiro Kashiwagi (D3) and Hiroki Yokohama (M2) gave interactive presentations at INTERACTION 2023."
+            ],
+            "links": [
+                { "label": "Event page", "url": "https://www.interaction-ipsj.org/2023/" }
+            ]
+        }
     },
     {
         "id": "2023-03-03",
@@ -54,7 +90,17 @@
         ],
         "links": [
             { "label": "参照ページ", "url": "https://www.ipsj.or.jp/event/taikai/85/index.html" }
-        ]
+        ],
+        "en": {
+            "category": "Presentation",
+            "title": "We gave presentations at the 85th IPSJ National Convention",
+            "body": [
+                "Sonoka Kikumura (B4) and Takahiro Tokikane (B4) gave presentations at the 85th National Convention of the Information Processing Society of Japan (IPSJ)."
+            ],
+            "links": [
+                { "label": "Event page", "url": "https://www.ipsj.or.jp/event/taikai/85/index.html" }
+            ]
+        }
     },
     {
         "id": "2023-03-01",
@@ -64,6 +110,14 @@
         "body": [
             "研究室サイトを立ち上げました！これからじゃんじゃん更新していきます！",
             "(by 担当者)"
-        ]
+        ],
+        "en": {
+            "category": "Announcement",
+            "title": "We launched our lab website!",
+            "body": [
+                "We launched our lab website! We will keep updating it!",
+                "(by the site administrator)"
+            ]
+        }
     }
 ]
