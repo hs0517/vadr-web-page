@@ -1,0 +1,27 @@
+/* 研究プロジェクトページ上部の画像 + 中央のキャプション */
+.c-hero {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+}
+
+.c-hero__img {
+    width: 100%;
+}
+
+.c-hero__caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    transform: translate(-50%, -50%);
+    font-size: 3vw;
+    color: #ffffff;
+    text-align: center;
+    text-shadow: 2px 2px 10px #5e5e5e,
+        -2px 2px 10px #5e5e5e,
+        2px -2px 10px #5e5e5e,
+        -2px -2px 10px #5e5e5e;
+}

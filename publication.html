@@ -3,205 +3,150 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Paper</title>
-    <link rel="stylesheet" href="./css/object/project/publication.css" type="text/css">
-    <link rel="stylesheet" href="./css/layout/header.css" type="text/css">
-    <script src="./js/vendor/jquery-3.6.0.min.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script type="text/javascript" src="./footerFixed.js"></script>
-    <script type="text/javascript" src="./js/global-nav.js"></script>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/include.js" defer></script>
+    <script src="/js/global-nav.js" defer></script>
 </head>
 
-<header>
-    <div class="hamburger">
-        <div class="logo">
-            <a href="./index.html"><img src="./img/vadr-logo.png"></a>
-        </div>
-        <p class="btn-gNav">
-            <span></span>
-            <span></span>
-            <span></span>
-        </p>
-        <nav class="gNav">
-            <ul class="gNav-menu">
-                <!-- <div class="menu">
-                    <ul id="dropmenu"> -->
-                <li><a href="./news.html">News</a></li>
-                <li><a href="./members.html">Members</a></li>
-                <li><a>Research</a>
-                    <ul>
-                        <li><a href="./beam.html">BEAm</a></li>
-                        <li><a href="./ditto.html">DITTO</a></li>
-                        <li><a href="./mavenread.html">MAVenRead</a></li>
-                        <li><a href="./tciex.html">TCieX</a></li>
-                        <li><a href="./lyricbathe.html">LyricBathe</a></li>
-                        <li><a href="./DDrPP.html">DDrPP</a></li>
-                    </ul>
-                </li>
-                <li><a href="./publication.html">Publication</a></li>
-                <!-- </ul>
-                </div> -->
-            </ul>
-        </nav>
-    </div>
-</header>
-
 <body>
-    <!-- <script src="./components/header.js"></script>
-    <script src="./components/navigation.js"></script> -->
+    <header class="l-header" data-include="/include/header.html"></header>
 
-    <div class="publication">
-        <div class="paper_list">
-            <h1>対外発表一覧</h1>
-        </div>
-        <ol>
-            <li>
+    <main class="l-main p-publication">
+        <h1 class="p-publication__heading">対外発表一覧</h1>
+        <ol class="p-publication__list">
+            <li class="p-publication__item">
                 渡部丈, 山本恭裕, 中小路久美代, プログラミングに伴う活動の履歴をアンビエントディスプレイ上に提示する環境のデザインと試作, 情報処理学会研究報告,
                 第204回ヒューマンコンピュータインタラクション研究会, August 8th, 2023.
             </li>
-            <li>
+            <li class="p-publication__item">
                 中小路久美代, 見立てて見て取るための視覚的表現とインタラクティビティ, 特別講演, 第26回 画像の認識・理解シンポジウム (MIRU2023), 情報処理学会コンピュータビジョンとイメージメディア研究会,
                 Hamamatsu, Shizuoka, July 27th, 2023.
-                [<a href="http://cvim.ipsj.or.jp/MIRU2023/p_keynote/">URL</a>]
+                [<a class="p-publication__link" href="http://cvim.ipsj.or.jp/MIRU2023/p_keynote/">URL</a>]
             </li>
-            <li>
+            <li class="p-publication__item">
                 中小路久美代, テキスト情報とのビジュアルインタラクティビティ, 招待講演, 電子情報通信学会九州支部主催講演会, 九州大学, June 9, 2023.
             </li>
-            <li>
+            <li class="p-publication__item">
                 時兼隆祐, 中小路久美代, データと映像を用いたジムカーナ走行の振り返り, 人工知能学会身体知研究会, SIG-SKL-39-02, pp.01-08, Tokyo, Japan, July 1st,
                 2023.
             </li>
-            <li>
+            <li class="p-publication__item">
                 Jun Kato, Jonas Frich, Zhicong Lu, Jennifer Jacobs, Kumiyo Nakakoji, Celine Latulipe, Special Interest
                 Group on Creativity and Cultures in Computing, Proceedings of CHI2023, ACM Press, Hannover, Germany,
                 pp.1-3, April, 2023.
             </li>
-            <li>
+            <li class="p-publication__item">
                 渡部丈, 山本恭裕, 中小路久美代, プログラミングに伴う多様な活動の履歴をブラウジングする環境HALO-Browserのデザインと試作, 情報処理学会研究報告, Vol.2023-HCI-202,
                 No.5, pp.1-7, Tokyo, Japan, March 13-15, 2023.
             </li>
-            <li>
+            <li class="p-publication__item">
                 横濱拓樹, 柏木敏朗, 山本恭裕, 中小路久美代, MAVenReadVerse:テキストアニメーションを施した詩を紙の本で読む体験の創出, 情報処理学会 インタラクション2023, 3B-40,
                 pp.936-941, 東京, March 8-10, 2023.
             </li>
-            <li>
+            <li class="p-publication__item">
                 柏木敏朗, 中小路久美代, 物理世界における作用と仮想世界における作用の融合と調和, 情報処理学会 インタラクション2023, 3C-54, pp.995-100, 東京, March 8-10, 2023.
             </li>
-            <li>
+            <li class="p-publication__item">
                 菊村苑香, 渡部丈, 中小路久美代, 函館市史: 統計史料編のデジタルデータ化に向けた校正作業の支援, 情報処理学会第85回全国大会, 4ZL-03, pp.4-887-4-888, 東京都調布市,
                 March 3, 2023.
             </li>
-            <li>
+            <li class="p-publication__item">
                 時兼隆祐, 中小路久美代, スポーツドライビング指導時に用いられる言語的体感表現の具現化に向けて, 情報処理学会第85回全国大会, 5ZF-05, pp.4-201-4-202, 東京都調布市, March
                 3, 2023.
             </li>
-            <li>
+            <li class="p-publication__item">
                 渡部丈, 中小路久美代, 山本恭裕, 多様な活動の履歴を用いたプログラミング学習支援環境HALO Toolsの提案, FIT2022（第21回情報科学技術フォーラム）予稿集, N-005, 第4分冊,
                 pp.243-248, September 13, 2022. (in Japanese)
             </li>
-            <li>
+            <li class="p-publication__item">
                 横濱拓樹, 柏木敏朗, 山本恭裕, 中小路久美代, MRを用いた読書環境における文字の表現方式と詩の印象の違いに関する考察, ヒューマンインタフェースシンポジウム2022, ヒューマンインタフェース学会,
                 1T-D2, pp.75-80, August 31st, 2022.
             </li>
-            <li>
+            <li class="p-publication__item">
                 中小路久美代, 藤原慎太郎, 寺沢憲吾, 山本恭裕, 川嶋稔夫, 木村健一, 松原伸人, 地方史統計資料における知的探索インタラクションのためのデジタル情報化, 情報処理学会, 人文科学とコンピュータ研究会,
                 Vol.2022-CH-129 No.2, pp.1-5, May21, 2022.
             </li>
-            <li>
+            <li class="p-publication__item">
                 中小路久美代, 「提案手法の略称の決め方」への回答, 情報処理学会学会誌「先生，質問です！」, Vol.63 No.3, 2022.
             </li>
-            <li>
+            <li class="p-publication__item">
                 渡部丈, 中小路久美代, 山本恭裕, 自己のプログラミング履歴を用いたインタラクティブなプログラミング学習支援環境，情報処理学会第84回全国大会，5ZH-06, pp.4-629-4-630,
                 Matsuyama, Ehime, March, 2022.
             </li>
-            <li>
+            <li class="p-publication__item">
                 横濱拓樹, 山本恭裕, 中小路 久美代, 仮想空間における提示の組み合わせ方から生じる読書インタラクションの違いに関する調査と分析, ヒューマンインタフェースシンポジウム2021,
                 ヒューマンインタフェース学会, PD2-3, pp.381-387, September 2021.
             </li>
-            <li>
+            <li class="p-publication__item">
                 中小路久美代, 山本恭裕, 松原伸人, 北雄介, データ可視化におけるデータインタラクティビティ, 電子情報通信学会誌, 「データサイエンスにおけるデータ抽象化によるデータ理解へのアプローチ」小特集号,
                 pp.197-205, March 2021.
             </li>
-            <li>
+            <li class="p-publication__item">
                 光森達希，内海裕太郎，中小路久美代，山本恭裕，路線バスにおける利用者の乗り過ごし防止のための位置情報の変遷を用いた情報環境，情報処理学会第83回全国大会，7ZA-03, pp.4-193-4-194,
                 Osaka, Japan (online), March 20, 2021.
             </li>
-            <li>
+            <li class="p-publication__item">
                 横濱拓樹，光森達希，中小路久美代，山本恭裕，実世界オブジェクトへの投影と仮想空間の提示を組み合わせた読書インタラクション，情報処理学会第83回全国大会，6ZF-04, pp.4-727-4-728,
                 Osaka, Japan (online), March 20, 2021.
             </li>
-            <li>
+            <li class="p-publication__item">
                 内海裕太郎，下田修平，中小路久美代，山本恭裕，利用者の自己開示を通した思いの理解と明示化を促すチャットボットUIの設計と構築，情報処理学会第83回全国大会，5ZA-06, pp.4-163-4-164,
                 Osaka, Japan (online), March 19, 2021.
             </li>
-            <li>
+            <li class="p-publication__item">
                 下田修平，横濱拓樹，中小路久美代，山本恭裕，プログラミング初学者の自己学習のための変数を中心としたプログラム理解支援環，情報処理学会第83回全国大会，6Zc-02, pp.4-497-4-498,Osaka,
                 Japan (online), March 20, 2021.
             </li>
-            <li>
-
+            <li class="p-publication__item">
                 Hiroko Satoh, Tomohiro Oda, Kumiyo Nakakoji, Takeaki Uno, Satoru Iwata, Koichi Ohno, RMapDB: chemical
                 reaction route map data for quantum mechanical-based data chemistry, Materials Cloud Archive 2020.138
                 (2020), November 4th, 2020, doi: 10.24435/materialscloud:5f-14.
-                https://archive.materialscloud.org/record/2020.138 <<< Data Contribution>>>
+                https://archive.materialscloud.org/record/2020.138 &lt;&lt;&lt; Data Contribution&gt;&gt;&gt;
             </li>
-            <li>
+            <li class="p-publication__item">
                 Tomohiro Oda, Keijiro Araki, Yasuhiro Yamamoto, Kumiyo Nakakoji, Han-Myung Chang, Peter Larsen,
                 Specifying Abstract User Interface in VDM-SL, Overture 18 Workshop, 2020.
             </li>
-            <li>
+            <li class="p-publication__item">
                 山本恭裕, 松原伸人, 中小路久美代, 街の営みの理解に向けた路線バス運行情報を用いた可視化環境の提案, ヒューマンインタフェースサイバーコロキアム (HIC2 2020), ヒューマンインタフェース学会,
                 pp.427-429, 2E4-4, 2020.
             </li>
-            <li>
+            <li class="p-publication__item">
                 北雄介, 中小路久美代, 山本恭裕, 「デザインの現象」の理解に向けた研究方法論, 日本デザイン学会第67回春季研究発表大会概要集, 2020, Vol.67, 日本デザイン学会, pp. 16-17,
-                August 27, 2020 (published). [<a href="https://doi.org/10.11247/jssd.67.0_16">doi</a>]
+                August 27, 2020 (published). [<a class="p-publication__link" href="https://doi.org/10.11247/jssd.67.0_16">doi</a>]
             </li>
-            <li>
+            <li class="p-publication__item">
                 Tomohiro Oda, Keijiro Araki, Yasuhiro Yamamoto, Kumiyo Nakakoji, Hiroshi Sako, Han-Myung Chang, Peter
                 Gorm Larsen, ViennaDoc: An Animatable and Testable Specification Documentation Tool, Formal Methods: FM
                 2019 International Workshops, Emil Sekerinski et al. (eds.), Lecture Notes in Computer Science, LNCS
-                12233, pp.290-302, Springer, 2020. [<a href="https://doi.org/10.1007/978-3-030-54997-8_19">doi</a>]
+                12233, pp.290-302, Springer, 2020. [<a class="p-publication__link" href="https://doi.org/10.1007/978-3-030-54997-8_19">doi</a>]
             </li>
-            <li>
+            <li class="p-publication__item">
                 小田朋宏, 張漢明, 山本恭裕, 中小路久美代, 荒木啓二郎, 探索的仕様記述のための履歴ツールの提案と実装, ソフトウェアシンポジウム2020, ソフトウェア技術者協会, pp.1-9, June
                 2020.
             </li>
-            <li>
+            <li class="p-publication__item">
                 中小路久美代, 山本恭裕, 松原伸人, 川嶋稔夫, 木村健一, 函館市史:統計史料編のデジタルデータ化における多角的検討, 情報知識学会誌, Vol.30, No.2, pp.176-181,
-                情報知識学会(2020年度)第28回年次大会, 北海道函館市(オンライン開催), May 24, 2020. [<a
-                    href="https://doi.org/10.2964/jsik_2020_015">doi</a>]
+                情報知識学会(2020年度)第28回年次大会, 北海道函館市(オンライン開催), May 24, 2020. [<a class="p-publication__link" href="https://doi.org/10.2964/jsik_2020_015">doi</a>]
             </li>
-            <li>
+            <li class="p-publication__item">
                 中小路久美代, 山本恭裕, 松原伸人, 路線バス運行情報を用いた情報風景化の試作, インタラクション2020論文集, 情報処理学会, 2P-82, pp.776-780, Tokyo, March 10,
                 2020.
             </li>
-            <li>
+            <li class="p-publication__item">
                 中小路久美代, 知識共創過程の発話に含まれる名詞句の固有名詞的な役割の発現と変容, 第64回ことば工学研究会資料, 人工知能学会 SIGLSE-B903-8, pp.55-59, Hakodate,
                 Hokkaido, March 2, 2020.
             </li>
-            <li>
+            <li class="p-publication__item">
                 中小路久美代, 山本恭裕, 松原伸人, 北雄介, 白石晃一, 小林潤平, デザイン過程が蓄積された複数データ群をブラウジングする情報環境, Designシンポジウム2019, Yokohama, Japan,
                 pp.24-30, November 2019.
             </li>
         </ol>
-    </div>
+    </main>
 
-    <footer id="footer">
-        <div class="f-wrapper">
-            <div class="logo">
-                <img src="./img/vadr-logo.png">
-            </div>
-            <div class="f-text">
-                <p>〒041-8655 北海道函館市亀田中野町 116-2</p>
-                <p>公立はこだて未来大学 システム情報科学部</p>
-                <p>情報アーキテクチャ学科</p>
-                <p>研究室: 429</p>
-            </div>
-        </div>
-    </footer>
+    <footer class="l-footer" data-include="/include/footer.html"></footer>
 </body>
 
 </html>

@@ -1,109 +1,75 @@
-.news {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+/* News一覧ページ */
+.p-news {
+    display: flow-root;
     margin: 5% 7.5%;
 }
 
-.news h1 {
-    text-align: left;
-    font-weight: bold;
-    margin-block-start: 0em;
-    margin-block-end: 0em;
-    padding: 2.5% 0%;
-}
-
-.contents {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
-    padding-bottom: 2.5%;
-}
-
-.news_box {
-    overflow: auto;
+.p-news__box {
     height: 60vh;
+    margin-bottom: 2.5%;
+    overflow: auto;
     border: solid 1.3px #000000;
 }
 
-.news-list {
-    list-style: none outside;
-    margin: 0;
-    padding: 0;
+.p-news__list {
+    list-style: none;
 }
 
-.news-list .item a {
+.p-news__link {
     display: flex;
-    /* flex-wrap: wrap;
-    flex-wrap: nowrap; */
-    text-decoration: none;
-    color: #333;
-    border-bottom: 1px solid #CCC;
-    padding: 20px 20px;
+    padding: 20px;
+    border-bottom: 1px solid #cccccc;
+    color: #333333;
+    font-size: 20px;
 }
 
-.news-list .item:first-child a {
-    border-top: 1px solid #CCC;
+.p-news__item:first-child .p-news__link {
+    border-top: 1px solid #cccccc;
 }
 
-.news-list .item .date {
+.p-news__date {
+    min-width: 120px;
     margin: 0;
-    min-width: 140px;
+    padding: 0 20px 0 0;
+    color: #999999;
     font-size: 16px;
-    color: #999;
-    padding: 0 20px 0 0;
 }
 
-.news-list .item .category {
+.p-news__category {
+    min-width: 120px;
     margin: 0;
-    min-width: 140px;
     padding: 0 20px 0 0;
 }
 
-.news-list .item .category span {
-    background: #999;
-    color: #FFF;
-    text-align: center;
+.p-news__category-label {
     display: inline-block;
     padding: 5px 20px;
+    background: #999999;
+    color: #ffffff;
     font-size: 12px;
     line-height: 1;
+    text-align: center;
 }
 
-.news-list .item .title {
-    margin: 0;
+.p-news__title {
     width: 100%;
+    margin: 0;
 }
 
-.news-list .item a:hover .title {
+.p-news__link:hover .p-news__title {
     color: rgb(183, 59, 14);
 }
 
-@media screen and (max-width: 767px) {
-    .news-list .item a {
+@media screen and (max-width: 768px) {
+    .p-news__link {
         flex-wrap: wrap;
     }
 
-    .news-list .item .date {
-        min-width: 100px;
+    .p-news__date {
+        min-width: 80px;
     }
 
-    .news-list .item .title {
+    .p-news__title {
         margin-top: 10px;
     }
 }
-
-/* 装飾 */
-
-* {
-    box-sizing: border-box;
-}
-
-/* a{
-    text-decoration: none;
-}
-
-body{
-    margin: 20px;
-} */

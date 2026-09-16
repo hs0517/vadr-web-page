@@ -1,79 +1,76 @@
-<header>
-    <div class="hamburger">
-        <div class="logo">
-            <a href="/index.html"><img src="/img/vadr-logo.png" alt="VADR"></a>
-        </div>
-
-        <button class="btn-gNav" type="button" aria-expanded="false" aria-controls="gNav" aria-label="メニューを開く">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-
-        <nav class="gNav" id="gNav">
-            <ul class="gNav-menu">
-                <li><a href="/news.html">News</a></li>
-                <li><a href="/members.html">Members</a></li>
-
-                <li class="has-panel">
-                    <button class="gNav-toggle js-research-toggle" type="button" aria-expanded="false"
-                        aria-controls="researchPanel">Researches</button>
-
-                    <div class="research-panel" id="researchPanel">
-                        <button class="research-panel-close js-research-close" type="button" aria-label="閉じる">
-                            <span></span>
-                            <span></span>
-                        </button>
-
-                        <ul class="research-list">
-                            <li>
-                                <a href="/beam.html">
-                                    <img src="/img/research/beam-thumb.jpg" alt="">
-                                    <span class="research-name">BEAm</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/DDrPP.html">
-                                    <img src="/img/research/ddrpp-thumb.jpg" alt="">
-                                    <span class="research-name">DDrPP</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/ditto.html">
-                                    <img src="/img/research/ditto-thumb.jpg" alt="">
-                                    <span class="research-name">DITTO</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/halo.html">
-                                    <img src="/img/research/halo-thumb.jpg" alt="">
-                                    <span class="research-name">HALO</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/lyricbathe.html">
-                                    <img src="/img/research/lyricbathe-thumb.jpg" alt="">
-                                    <span class="research-name">LyricBathe</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/mavenread.html">
-                                    <img src="/img/research/mavenread-thumb.jpg" alt="">
-                                    <span class="research-name">MAVenRead</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/tciex.html">
-                                    <img src="/img/research/tciex-thumb.jpg" alt="">
-                                    <span class="research-name">TCieX</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </li>
-
-                <li><a href="/publication.html">Publications</a></li>
-            </ul>
-        </nav>
+<div class="l-header__inner">
+    <div class="c-logo l-header__logo">
+        <a href="/index.html"><img class="c-logo__img" src="/img/vadr-logo.png" alt="VADR"></a>
     </div>
-</header>
+
+    <button class="c-hamburger js-nav-toggle" type="button" aria-expanded="false" aria-controls="global-nav" aria-label="メニューを開く">
+        <span class="c-hamburger__bar"></span>
+        <span class="c-hamburger__bar"></span>
+        <span class="c-hamburger__bar"></span>
+    </button>
+
+    <nav class="p-global-nav js-nav" id="global-nav">
+        <ul class="p-global-nav__list">
+            <li class="p-global-nav__item"><a class="p-global-nav__link" href="/news.html">News</a></li>
+            <li class="p-global-nav__item"><a class="p-global-nav__link" href="/members.html">Members</a></li>
+
+            <li class="p-global-nav__item p-global-nav__item--has-panel">
+                <button class="p-global-nav__link p-global-nav__toggle js-research-toggle" type="button" aria-expanded="false" aria-controls="research-panel">Researches</button>
+
+                <div class="p-research-panel js-research-panel" id="research-panel">
+                    <button class="c-close-button p-research-panel__close js-research-close" type="button" aria-label="閉じる">
+                        <span class="c-close-button__bar"></span>
+                        <span class="c-close-button__bar"></span>
+                    </button>
+
+                    <ul class="p-research-panel__list">
+                        <li class="p-research-panel__item">
+                            <a class="p-research-panel__link" href="/beam.html">
+                                <img class="p-research-panel__img" src="/img/research/beam-thumb.jpg" alt="">
+                                <span class="p-research-panel__name">BEAm</span>
+                            </a>
+                        </li>
+                        <li class="p-research-panel__item">
+                            <a class="p-research-panel__link" href="/DDrPP.html">
+                                <img class="p-research-panel__img" src="/img/research/ddrpp-thumb.jpg" alt="">
+                                <span class="p-research-panel__name">DDrPP</span>
+                            </a>
+                        </li>
+                        <li class="p-research-panel__item">
+                            <a class="p-research-panel__link" href="/ditto.html">
+                                <img class="p-research-panel__img" src="/img/research/ditto-thumb.jpg" alt="">
+                                <span class="p-research-panel__name">DITTO</span>
+                            </a>
+                        </li>
+                        <li class="p-research-panel__item">
+                            <a class="p-research-panel__link" href="/halo.html">
+                                <img class="p-research-panel__img" src="/img/research/halo-thumb.jpg" alt="">
+                                <span class="p-research-panel__name">HALO</span>
+                            </a>
+                        </li>
+                        <li class="p-research-panel__item">
+                            <a class="p-research-panel__link" href="/lyricbathe.html">
+                                <img class="p-research-panel__img" src="/img/research/lyricbathe-thumb.jpg" alt="">
+                                <span class="p-research-panel__name">LyricBathe</span>
+                            </a>
+                        </li>
+                        <li class="p-research-panel__item">
+                            <a class="p-research-panel__link" href="/mavenread.html">
+                                <img class="p-research-panel__img" src="/img/research/mavenread-thumb.jpg" alt="">
+                                <span class="p-research-panel__name">MAVenRead</span>
+                            </a>
+                        </li>
+                        <li class="p-research-panel__item">
+                            <a class="p-research-panel__link" href="/tciex.html">
+                                <img class="p-research-panel__img" src="/img/research/tciex-thumb.jpg" alt="">
+                                <span class="p-research-panel__name">TCieX</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
+            <li class="p-global-nav__item"><a class="p-global-nav__link" href="/publication.html">Publications</a></li>
+        </ul>
+    </nav>
+</div>

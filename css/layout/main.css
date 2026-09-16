@@ -1,0 +1,15 @@
+.l-main {
+    flex: 1 0 auto;
+}
+
+/* サイドメニュー + 本文の2カラム */
+.l-page {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin: 7.5%;
+}
+
+.l-page__body {
+    width: 80%;
+}

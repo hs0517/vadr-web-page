@@ -1,57 +1,61 @@
-$(function () {
-    var $btnGNav = $('.btn-gNav');
-    var $gNav = $('.gNav');
-    var $researchToggle = $('.js-research-toggle');
-    var $researchPanel = $('.research-panel');
-    var $researchClose = $('.js-research-close');
-    var pcQuery = window.matchMedia('(min-width: 769px)');
+// グローバルナビ（ハンバーガーメニュー / Researchパネル）の開閉
+(function () {
+    const pcQuery = window.matchMedia('(min-width: 769px)');
 
-    function closeResearch() {
-        $researchPanel.removeClass('open');
-        $researchToggle.attr('aria-expanded', 'false');
-        $('body').removeClass('no-scroll');
-    }
-
-    function closeGNav() {
-        $gNav.removeClass('open');
-        $btnGNav.attr('aria-expanded', 'false');
-        closeResearch();
-    }
-
-    // ハンバーガーボタン：メニュー全体の開閉
-    $btnGNav.on('click', function () {
-        var isOpen = $gNav.toggleClass('open').hasClass('open');
-        $(this).attr('aria-expanded', String(isOpen));
-        if (!isOpen) {
-            closeResearch();
+    function setResearchOpen(isOpen) {
+        const panel = document.querySelector('.js-research-panel');
+        const toggle = document.querySelector('.js-research-toggle');
+        if (!panel || !toggle) {
+            return;
         }
-    });
-
-    // Research：PCではフルスクリーンオーバーレイ、モバイルではプルダウン（アコーディオン）
-    $researchToggle.on('click', function () {
-        var isOpen = $researchPanel.toggleClass('open').hasClass('open');
-        $(this).attr('aria-expanded', String(isOpen));
+        panel.classList.toggle('is-open', isOpen);
+        toggle.setAttribute('aria-expanded', String(isOpen));
         // PC表示でオーバーレイを開いている間は背面のスクロールを止める
-        $('body').toggleClass('no-scroll', isOpen && pcQuery.matches);
-    });
+        document.body.classList.toggle('is-scroll-locked', isOpen && pcQuery.matches);
+    }
 
-    // オーバーレイの閉じるボタン（PCのみ表示）
-    $researchClose.on('click', closeResearch);
+    function setNavOpen(isOpen) {
+        const nav = document.querySelector('.js-nav');
+        const toggle = document.querySelector('.js-nav-toggle');
+        if (!nav || !toggle) {
+            return;
+        }
+        nav.classList.toggle('is-open', isOpen);
+        toggle.setAttribute('aria-expanded', String(isOpen));
+        if (!isOpen) {
+            setResearchOpen(false);
+        }
+    }
 
-    // オーバーレイの背景（カード以外の余白）をクリックしたら閉じる
-    $researchPanel.on('click', function (e) {
-        if (e.target === this) {
-            closeResearch();
+    function isOpen(selector) {
+        const el = document.querySelector(selector);
+        return el !== null && el.classList.contains('is-open');
+    }
+
+    // ヘッダーは include.js で後から挿入されるため、document でまとめてクリックを受ける
+    document.addEventListener('click', function (e) {
+        const target = e.target;
+        if (target.closest('.js-nav-toggle')) {
+            // ハンバーガーボタン：メニュー全体の開閉
+            setNavOpen(!isOpen('.js-nav'));
+        } else if (target.closest('.js-research-toggle')) {
+            // Research：PCではフルスクリーンオーバーレイ、モバイルではプルダウン（アコーディオン）
+            setResearchOpen(!isOpen('.js-research-panel'));
+        } else if (target.closest('.js-research-close') || target.classList.contains('js-research-panel')) {
+            // 閉じるボタン、またはオーバーレイの背景（カード以外の余白）をクリックしたら閉じる
+            setResearchOpen(false);
         }
     });
 
     // Escキーで閉じる
-    $(document).on('keydown', function (e) {
+    document.addEventListener('keydown', function (e) {
         if (e.key === 'Escape') {
-            closeResearch();
+            setResearchOpen(false);
         }
     });
 
     // 画面幅がPC⇔モバイルで切り替わったら開閉状態をリセット
-    pcQuery.addEventListener('change', closeGNav);
-});
+    pcQuery.addEventListener('change', function () {
+        setNavOpen(false);
+    });
+})();

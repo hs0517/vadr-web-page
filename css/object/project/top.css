@@ -1,113 +1,27 @@
-.main {
-    display: block;
-}
-
-.container-contents {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    margin: 7.5%;
-}
-
-.contents {
-    display: block;
-    width: 80%;
-}
-
-/* .Content img{
-    width: 100%;
-} */
-
-
-@media screen and (min-width: 769px) {
-    .introduction {
-        width: 100%;
-        /*line-height: 0.8em;*/
-    }
-}
-
-@media screen and (max-width: 640px) {
-    .introduction {
-        width: 80%;
-    }
-}
-
-.introduction h1 {
-    border-bottom: solid 1px #a9a9a9;
-    line-height: 2.0em;
-}
-
-.introduction ul {
-    list-style-type: none;
-}
-
-.introduction ol {
+/* トップページ */
+.p-top__list {
     margin-bottom: 20px;
 }
 
-.project-introduction {
-    width: 80%;
-}
-
-.project-introduction p {
-    padding: 2.5% 0%;
-}
-
-.project-introduction h1 {
-    border-bottom: solid 1px #a9a9a9;
-    line-height: 2.0em;
-}
-
-/*
-.main h3{
-    text-align: left;
-    font-weight: normal;
-}
-
-.main p{
-    line-height: 1.5em;
-}
-
-.main ul {
-    list-style-type: square;
-    padding-top: 0px;
-    padding-bottom: 10px
-}
-
-.main ul li {
-    padding-top:0px;
-    padding-bottom:16px;
-}
-
-.main ol {
-    padding-top: 0px;
-    padding-bottom: 10px
-}
-
-.main ol li {
-    padding-top:0px;
-    padding-bottom:16px;
-}
-*/
-
-
-
-/* .slider-inner {
-    width: 300vw;
-    animation: slider 10s infinite ease;
-}
-  
-@keyframes slider {
-    0% {
-    transform: translateX(0);
+@media screen and (min-width: 769px) {
+    .p-top__projects {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        /* gapを%で指定すると高さが認識されないので注意 */
+        gap: 2.5em;
+        padding: 5% 0;
     }
-    33% {
-    transform: translateX(-300vw);
+}
+
+@media screen and (max-width: 768px) {
+    .p-top__intro {
+        width: 80%;
     }
-    66% {
-    transform: translateX(-600vw);
+
+    .p-top__projects {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        margin-top: 100px;
     }
-    100% {
-    transform: translateX(0);
-    }
-} */
+}

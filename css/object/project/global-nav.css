@@ -1,0 +1,102 @@
+/* ヘッダーのグローバルナビ。PCでは横並び、モバイルではハンバーガーで開く全画面メニュー */
+.p-global-nav__list {
+    list-style-type: none;
+}
+
+.p-global-nav__link {
+    display: block;
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+@media screen and (min-width: 769px) {
+    .p-global-nav {
+        height: 100%;
+        margin-right: 2.5%;
+    }
+
+    .p-global-nav__list {
+        display: flex;
+        height: 100%;
+    }
+
+    .p-global-nav__item {
+        position: relative;
+        height: 100%;
+        z-index: 50;
+    }
+
+    .p-global-nav__link {
+        padding: 0 20px;
+        line-height: 6.5vw;
+    }
+
+    .p-global-nav__item:hover > .p-global-nav__link,
+    .p-global-nav__toggle[aria-expanded="true"] {
+        box-sizing: border-box;
+        height: 100%;
+        border-bottom: #ffffff 3px solid;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .p-global-nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 100%;
+        height: 100%;
+        padding-top: 50px;
+        box-sizing: border-box;
+        overflow-y: auto;
+        background-color: rgba(0, 0, 0, 0.9);
+        z-index: 1;
+        transition: 0.3s;
+    }
+
+    .p-global-nav.is-open {
+        right: 0;
+    }
+
+    .p-global-nav__list {
+        width: 100%;
+        text-align: center;
+    }
+
+    .p-global-nav__item {
+        width: 86%;
+        margin: 0 auto;
+        padding: 15px;
+        border-bottom: #525252 1px solid;
+    }
+
+    .p-global-nav__item--has-panel {
+        padding-bottom: 0;
+    }
+
+    /* Research：タップで下にプルダウンするアコーディオンの開閉ボタン */
+    .p-global-nav__toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding: 15px 0;
+    }
+
+    .p-global-nav__toggle::after {
+        content: "";
+        width: 7px;
+        height: 7px;
+        margin-left: 0.6em;
+        border-right: 2px solid #ffffff;
+        border-bottom: 2px solid #ffffff;
+        transform: rotate(45deg);
+        transition: transform 0.25s ease;
+    }
+
+    .p-global-nav__toggle[aria-expanded="true"]::after {
+        transform: rotate(-135deg);
+    }
+}

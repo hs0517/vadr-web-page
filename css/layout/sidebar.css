@@ -1,0 +1,36 @@
+@media screen and (min-width: 769px) {
+    .l-sidebar {
+        position: sticky;
+        top: 50px;
+        height: 100%;
+        line-height: 250%;
+    }
+
+    .l-sidebar__list {
+        list-style-type: none;
+    }
+
+    .l-sidebar__link {
+        color: #7e7e7e;
+        font-size: 20px;
+    }
+
+    .l-sidebar__link:hover {
+        color: #4e4e4e;
+    }
+
+    .l-sidebar__link.is-current {
+        font-weight: bold;
+        background: linear-gradient(90deg, #65a7ce 0%, #537aaa 40%, #51438d 80%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        pointer-events: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .l-sidebar {
+        display: none;
+    }
+}

@@ -1,0 +1,19 @@
+/* 研究プロジェクトの紹介ページ */
+.p-research__text {
+    padding: 2.5% 0;
+}
+
+@media screen and (min-width: 769px) {
+    /* 説明文 + 動画を横に並べるデモ紹介（DITTO） */
+    .p-research__demo-body {
+        display: flex;
+        justify-content: space-evenly;
+        margin-bottom: 2.5%;
+    }
+
+    .p-research__demo-text {
+        width: 100%;
+        padding-right: 5%;
+        text-align: justify;
+    }
+}
