@@ -1,4 +1,4 @@
-/* News一覧ページ */
+/* News一覧（アーカイブ）ページ */
 .p-news {
     display: flow-root;
     margin: 5% 7.5%;
@@ -9,67 +9,4 @@
     margin-bottom: 2.5%;
     overflow: auto;
     border: solid 1.3px #000000;
-}
-
-.p-news__list {
-    list-style: none;
-}
-
-.p-news__link {
-    display: flex;
-    padding: 20px;
-    border-bottom: 1px solid #cccccc;
-    color: #333333;
-    font-size: 20px;
-}
-
-.p-news__item:first-child .p-news__link {
-    border-top: 1px solid #cccccc;
-}
-
-.p-news__date {
-    min-width: 120px;
-    margin: 0;
-    padding: 0 20px 0 0;
-    color: #999999;
-    font-size: 16px;
-}
-
-.p-news__category {
-    min-width: 120px;
-    margin: 0;
-    padding: 0 20px 0 0;
-}
-
-.p-news__category-label {
-    display: inline-block;
-    padding: 5px 20px;
-    background: #999999;
-    color: #ffffff;
-    font-size: 12px;
-    line-height: 1;
-    text-align: center;
-}
-
-.p-news__title {
-    width: 100%;
-    margin: 0;
-}
-
-.p-news__link:hover .p-news__title {
-    color: rgb(183, 59, 14);
-}
-
-@media screen and (max-width: 768px) {
-    .p-news__link {
-        flex-wrap: wrap;
-    }
-
-    .p-news__date {
-        min-width: 80px;
-    }
-
-    .p-news__title {
-        margin-top: 10px;
-    }
 }

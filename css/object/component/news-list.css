@@ -1,0 +1,63 @@
+/* ニュースの一覧（日付・カテゴリ・タイトル）。トップページとNews一覧ページで使う */
+.c-news-list {
+    list-style: none;
+}
+
+.c-news-list__link {
+    display: flex;
+    padding: 20px;
+    border-bottom: 1px solid #cccccc;
+    color: #333333;
+    font-size: 20px;
+}
+
+.c-news-list__item:first-child .c-news-list__link {
+    border-top: 1px solid #cccccc;
+}
+
+.c-news-list__date {
+    min-width: 120px;
+    margin: 0;
+    padding: 0 20px 0 0;
+    color: #999999;
+    font-size: 16px;
+}
+
+.c-news-list__category {
+    min-width: 120px;
+    margin: 0;
+    padding: 0 20px 0 0;
+}
+
+.c-news-list__category-label {
+    display: inline-block;
+    padding: 5px 20px;
+    background: #999999;
+    color: #ffffff;
+    font-size: 12px;
+    line-height: 1;
+    text-align: center;
+}
+
+.c-news-list__title {
+    width: 100%;
+    margin: 0;
+}
+
+.c-news-list__link:hover .c-news-list__title {
+    color: rgb(183, 59, 14);
+}
+
+@media screen and (max-width: 768px) {
+    .c-news-list__link {
+        flex-wrap: wrap;
+    }
+
+    .c-news-list__date {
+        min-width: 80px;
+    }
+
+    .c-news-list__title {
+        margin-top: 10px;
+    }
+}

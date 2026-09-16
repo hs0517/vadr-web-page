@@ -14,6 +14,7 @@
     <script src="/js/top-slider.js" defer></script>
     <script src="/js/projects-data.js" defer></script>
     <script src="/js/projects.js" defer></script>
+    <script src="/js/news.js" defer></script>
 </head>
 
 <body>
@@ -47,7 +48,8 @@
                     </p>
                 </div>
                 <div class="sp-slide">
-                    <a href="./lyricbathe.html"><img class="sp-image" src="/img_assets/slider/lyricbathe.jpg" alt=""></a>
+                    <a href="./lyricbathe.html"><img class="sp-image" src="/img_assets/slider/lyricbathe.jpg"
+                            alt=""></a>
                     <p class="sp-layer sp-black sp-padding" data-position="bottomRight">
                         LyricBathe
                     </p>
@@ -67,47 +69,50 @@
             </div>
         </div>
 
-        <div class="l-page">
-            <aside class="l-sidebar" data-include="/include/sidebar.html"></aside>
+        <div class="p-top">
+            <section class="p-top__news">
+                <h2 class="c-section-title">News</h2>
+                <!-- data-limitでニュースの表示件数を定義。未定義なら全件表示 -->
+                <ul class="c-news-list" id="js-news-list" data-limit="5"></ul>
+                <a class="p-top__news-more" href="/news.html">ニュース一覧へ</a>
+            </section>
 
-            <div class="l-page__body">
-                <section class="p-top__intro">
-                    <h1 class="c-page-title">
-                        <span class="c-page-title__main u-font-serif u-italic">VADR lab. </span>
-                        <span class="c-page-title__sub u-font-serif">Viable Artifact Design Research </span>
-                        <span class="c-page-title__sub">(ゔぇいだぁ・らぼらとり)</span>
-                    </h1>
-                    <p>VADR
-                        lab.では、可視化環境やインタラクティブなアプリケーションシステムによる、ドキドキ、ワクワクする体験や、だったらこうだな、こうすればもっといいかもと思考する体験の、創出とその仕組みについての研究を行っています。
-                        <br>
-                        私たちが研究として取り組むのは、〈人〉と〈ソフトウェアシステム〉とで構成される系の在り方です。人が使う道具としてソフトウェアシステムをデザインし実装する技術や、人を取り巻く環境としてソフトウェアシステムを実現するための構想について探求します。
-                    </p>
+            <section class="p-top__intro">
+                <h1 class="c-page-title">
+                    <span class="c-page-title__main u-font-serif u-italic">VADR lab. </span>
+                    <span class="c-page-title__sub u-font-serif">Viable Artifact Design Research </span>
+                    <span class="c-page-title__sub">(ゔぇいだぁ・らぼらとり)</span>
+                </h1>
+                <p>VADR
+                    lab.では、可視化環境やインタラクティブなアプリケーションシステムによる、ドキドキ、ワクワクする体験や、だったらこうだな、こうすればもっといいかもと思考する体験の、創出とその仕組みについての研究を行っています。
+                    <br>
+                    私たちが研究として取り組むのは、〈人〉と〈ソフトウェアシステム〉とで構成される系の在り方です。人が使う道具としてソフトウェアシステムをデザインし実装する技術や、人を取り巻く環境としてソフトウェアシステムを実現するための構想について探求します。
+                </p>
 
-                    <h3>研究課題のアプローチ</h3>
-                    <ol class="p-top__list">
-                        <li>ソフトウェア技術：人の入力に合わせて動的に変化する視覚表現を創出するような、〈ソフトウェアシステム〉を構築する技術</li>
-                        <li>認知科学：知覚や認識の特性や思考のプロセスや創造性の発現といった、〈人〉についての認知科学的な解明</li>
-                    </ol>
+                <h3>研究課題のアプローチ</h3>
+                <ol class="p-top__list">
+                    <li>ソフトウェア技術：人の入力に合わせて動的に変化する視覚表現を創出するような、〈ソフトウェアシステム〉を構築する技術</li>
+                    <li>認知科学：知覚や認識の特性や思考のプロセスや創造性の発現といった、〈人〉についての認知科学的な解明</li>
+                </ol>
 
-                    <h3>考え方のベース</h3>
-                    <ol class="p-top__list">
-                        <li>人は使う道具や環境で思考や振る舞いが変化する</li>
-                        <li>人と環境とは相互に依存する</li>
-                        <li>結果として人と環境の関係性は変化し続ける</li>
-                    </ol>
-                </section>
+                <h3>考え方のベース</h3>
+                <ol class="p-top__list">
+                    <li>人は使う道具や環境で思考や振る舞いが変化する</li>
+                    <li>人と環境とは相互に依存する</li>
+                    <li>結果として人と環境の関係性は変化し続ける</li>
+                </ol>
+            </section>
 
-                <section id="js-project-list" class="p-top__projects">
-                    <template id="js-project-card-template">
-                        <div class="c-card">
-                            <img class="c-card__img js-card-img" src="" alt="">
-                            <h3 class="c-card__title js-card-title"></h3>
-                            <p class="c-card__text js-card-text"></p>
-                            <a class="c-card__link js-card-link" href=""></a>
-                        </div>
-                    </template>
-                </section>
-            </div>
+            <section id="js-project-list" class="p-top__projects">
+                <template id="js-project-card-template">
+                    <div class="c-card">
+                        <img class="c-card__img js-card-img" src="" alt="">
+                        <h3 class="c-card__title js-card-title"></h3>
+                        <p class="c-card__text js-card-text"></p>
+                        <a class="c-card__link js-card-link" href=""></a>
+                    </div>
+                </template>
+            </section>
         </div>
     </main>
 
