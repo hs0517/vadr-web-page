@@ -15,6 +15,10 @@
     margin-left: 2.5em;
 }
 
+.l-header__lang {
+    flex-shrink: 0;
+}
+
 @media screen and (min-width: 769px) {
     .l-header {
         height: 6.5vw;
@@ -22,6 +26,10 @@
 
     .l-header__inner {
         height: 100%;
+    }
+
+    .l-header__lang {
+        margin: 0 2.5em 0 20px;
     }
 }
 
@@ -35,5 +43,12 @@
 
     .l-header__inner {
         max-width: 900px;
+    }
+
+    /* ハンバーガーボタン（top: 10px, right: 20px でずらしている）の左に、高さをそろえて置く */
+    .l-header__lang {
+        position: relative;
+        top: 10px;
+        margin: 0 40px 0 auto;
     }
 }

@@ -11,11 +11,6 @@
     font-weight: bold;
 }
 
-/* 言語切り替え（English / 日本語） */
-.p-global-nav__link--lang {
-    font-weight: normal;
-}
-
 /* パネルが開く項目であることを示す下向き矢印。開いている間は上向きになる */
 .p-global-nav__toggle::after {
     content: "";
@@ -37,7 +32,7 @@
 @media screen and (min-width: 769px) {
     .p-global-nav {
         height: 100%;
-        margin-right: 2.5%;
+        margin-left: auto;
     }
 
     .p-global-nav__list {
