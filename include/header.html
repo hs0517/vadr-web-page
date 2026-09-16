@@ -1,32 +1,79 @@
-<div class="hamburger">
-    <div class="logo">
-        <a href="/index.html"><img src="/img/vadr-logo.png"></a>
+<header>
+    <div class="hamburger">
+        <div class="logo">
+            <a href="/index.html"><img src="/img/vadr-logo.png" alt="VADR"></a>
+        </div>
+
+        <button class="btn-gNav" type="button" aria-expanded="false" aria-controls="gNav" aria-label="メニューを開く">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav class="gNav" id="gNav">
+            <ul class="gNav-menu">
+                <li><a href="/news.html">News</a></li>
+                <li><a href="/members.html">Members</a></li>
+
+                <li class="has-panel">
+                    <button class="gNav-toggle js-research-toggle" type="button" aria-expanded="false"
+                        aria-controls="researchPanel">Researches</button>
+
+                    <div class="research-panel" id="researchPanel">
+                        <button class="research-panel-close js-research-close" type="button" aria-label="閉じる">
+                            <span></span>
+                            <span></span>
+                        </button>
+
+                        <ul class="research-list">
+                            <li>
+                                <a href="/beam.html">
+                                    <img src="/img/research/beam-thumb.jpg" alt="">
+                                    <span class="research-name">BEAm</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/DDrPP.html">
+                                    <img src="/img/research/ddrpp-thumb.jpg" alt="">
+                                    <span class="research-name">DDrPP</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/ditto.html">
+                                    <img src="/img/research/ditto-thumb.jpg" alt="">
+                                    <span class="research-name">DITTO</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/halo.html">
+                                    <img src="/img/research/halo-thumb.jpg" alt="">
+                                    <span class="research-name">HALO</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/lyricbathe.html">
+                                    <img src="/img/research/lyricbathe-thumb.jpg" alt="">
+                                    <span class="research-name">LyricBathe</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/mavenread.html">
+                                    <img src="/img/research/mavenread-thumb.jpg" alt="">
+                                    <span class="research-name">MAVenRead</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/tciex.html">
+                                    <img src="/img/research/tciex-thumb.jpg" alt="">
+                                    <span class="research-name">TCieX</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li><a href="/publication.html">Publications</a></li>
+            </ul>
+        </nav>
     </div>
-    <p class="btn-gNav">
-        <span></span>
-        <span></span>
-        <span></span>
-    </p>
-    <nav class="gNav">
-        <ul class="gNav-menu">
-            <!-- <div class="menu">
-            <ul id="dropmenu"> -->
-            <li><a href="/news.html">News</a></li>
-            <li><a href="/members.html">Members</a></li>
-            <li><a>Research</a>
-                <ul>
-                    <li><a href="/beam.html">BEAm</a></li>
-                    <li><a href="/DDrPP.html">DDrPP</a></li>
-                    <li><a href="/ditto.html">DITTO</a></li>
-                    <li><a href="/halo.html">HALO</a></li>
-                    <li><a href="/lyricbathe.html">LyricBathe</a></li>
-                    <li><a href="/mavenread.html">MAVenRead</a></li>
-                    <li><a href="/tciex.html">TCieX</a></li>
-                </ul>
-            </li>
-            <li><a href="/publication.html">Publication</a></li>
-            <!-- </ul>
-        </div> -->
-        </ul>
-    </nav>
-</div>
+</header>

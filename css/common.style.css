@@ -1,10 +1,12 @@
 body {
     margin: 0;
     padding: 0px;
-    /*font-family:"Arial","Hiragino Kaku Gothic ProN", sans-serif;*/
     font-family: "Arial", "Hiragino Kaku Gothic ProN", sans-serif;
     background: #ffffff;
-    /*font-family: "Permanent Marker";font-size: 22px;*/
+}
+
+body.no-scroll {
+    overflow: hidden;
 }
 
 h1 {
@@ -35,12 +37,9 @@ button {
     outline: none;
     padding: 0;
 }
+
 button a {
     color: #000000;
-}
-
-span {
-    border-color: #000000;
 }
 
 .logo {
@@ -82,7 +81,6 @@ footer p:last-child {
 .f-wrapper .f-text {
     justify-content: space-between;
     padding: 5rem;
-    /* border-left: 1px solid #ffffff; */
 }
 
 .f-wrapper .f-text span {
@@ -117,27 +115,112 @@ footer p:last-child {
         -2px -2px 10px #5e5e5e;
 }
 
-/*ul {
-    display: table;
-}
 
-.menu li {
-    display: table-cell;
-    text-align: center;
-}
+/* =========================================
+   ヘッダー / グローバルナビ（PC・モバイル共通）
+   ========================================= */
 
-.menu a {
+.hamburger .gNav .gNav-menu li a,
+.hamburger .gNav .gNav-menu li .gNav-toggle {
     display: block;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
     text-decoration: none;
-    height: 60px;
-    color: #FFF;
-    font-size: 12pt;
-    margin: 20px 20px;
+    font-family: inherit;
+    text-align: left;
 }
 
-.menu li:hover {
-    background: #808080;
-}*/
+/* ハンバーガーアイコン（モバイルで表示） */
+.btn-gNav {
+    display: none;
+    position: relative;
+    width: 30px;
+    height: 24px;
+    z-index: 10;
+    box-sizing: border-box;
+}
+
+.btn-gNav span {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: #ffffff;
+    border-radius: 10px;
+    transition: transform 0.3s, top 0.3s;
+}
+
+.btn-gNav span:nth-child(1) {
+    top: 0;
+}
+
+.btn-gNav span:nth-child(2) {
+    top: 10px;
+}
+
+.btn-gNav span:nth-child(3) {
+    top: 20px;
+}
+
+.btn-gNav[aria-expanded="true"] span:nth-child(1) {
+    top: 10px;
+    transform: rotate(-45deg);
+}
+
+.btn-gNav[aria-expanded="true"] span:nth-child(2) {
+    opacity: 0;
+}
+
+.btn-gNav[aria-expanded="true"] span:nth-child(3) {
+    top: 10px;
+    transform: rotate(45deg);
+}
+
+/* Research：閉じるボタン（PCオーバーレイ用。中身の×アイコン） */
+.research-panel-close {
+    position: relative;
+    width: 26px;
+    height: 26px;
+}
+
+.research-panel-close span {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #ffffff;
+}
+
+.research-panel-close span:nth-child(1) {
+    transform: rotate(45deg);
+}
+
+.research-panel-close span:nth-child(2) {
+    transform: rotate(-45deg);
+}
+
+/* Research：サムネイル付きリスト（PC/モバイル共通の下地。並びは各メディアクエリで指定） */
+.research-list {
+    list-style: none;
+}
+
+.research-list a {
+    display: flex;
+    text-decoration: none;
+}
+
+.research-list img {
+    display: block;
+    object-fit: cover;
+    background: #1a1a1a;
+}
+
+.research-name {
+    color: #ffffff;
+    font-weight: bold;
+}
 
 
 /*pc用のスタイル*/
@@ -180,65 +263,77 @@ footer p:last-child {
         z-index: 50;
     }
 
-    .hamburger .gNav .gNav-menu li a {
-        display: block;
+    .hamburger .gNav .gNav-menu li a,
+    .hamburger .gNav .gNav-menu li .gNav-toggle {
         padding: 0px 20px;
         line-height: 6.5vw;
-        color: #fff;
-        font-size: 14px;
-        font-weight: bold;
-        text-decoration: none;
     }
 
-    .hamburger .gNav .gNav-menu li ul {
-        list-style: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        margin: 0;
-        padding: 0;
-        border-radius: 0 0 3px 3px;
-    }
-
-    .hamburger .gNav .gNav-menu li:last-child ul {
-        left: -100%;
-        width: 100%
-    }
-
-    .hamburger .gNav .gNav-menu li ul li {
-        overflow: hidden;
-        width: 200%;
-        height: 0;
-        color: #fff;
-        -moz-transition: .2s;
-        -webkit-transition: .2s;
-        -o-transition: .2s;
-        -ms-transition: .2s;
-        transition: .2s;
-    }
-
-    .hamburger .gNav .gNav-menu li ul li a {
-        padding: 13px 15px;
-        background: #696969;
-        color: #ffffff;
-        text-align: left;
-        font-size: 12px;
-        font-weight: normal;
-        line-height: 12px;
-    }
-
-    .hamburger .gNav .gNav-menu li:hover>a {
+    .hamburger .gNav .gNav-menu li:hover > a,
+    .hamburger .gNav .gNav-menu li.has-panel:hover > .gNav-toggle,
+    .hamburger .gNav .gNav-menu li .gNav-toggle[aria-expanded="true"] {
         height: 100%;
         border-bottom: #ffffff 3px solid;
         box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        -webkit-box-sizing: border-box;
     }
 
-    .hamburger .gNav .gNav-menu li:hover ul li {
-        overflow: visible;
-        height: 38px;
-        border-top: 0.5px solid #dcdcdc;
+    /* Research：画面全体にオーバーレイされるパネル */
+    .research-panel {
+        position: fixed;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(0, 0, 0, 0.97);
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.35s ease, visibility 0.35s ease;
+        z-index: 1000;
+    }
+
+    .research-panel.open {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .research-panel-close {
+        position: absolute;
+        top: 3rem;
+        right: 3rem;
+    }
+
+    .research-list {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 3rem 2.5rem;
+        width: 100%;
+        max-width: 1100px;
+        padding: 0 5%;
+        box-sizing: border-box;
+    }
+
+    .research-list a {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .research-list img {
+        width: 100%;
+        aspect-ratio: 4 / 3;
+        margin-bottom: 0.75em;
+        filter: grayscale(35%);
+        transition: filter 0.25s ease, transform 0.25s ease;
+    }
+
+    .research-list a:hover img {
+        filter: grayscale(0%);
+        transform: translateY(-4px);
+    }
+
+    .research-name {
+        font-size: 14px;
+        letter-spacing: 0.02em;
     }
 
     .sidemenu {
@@ -291,9 +386,7 @@ footer p:last-child {
         position: relative;
         width: 100%;
         height: 100%;
-        box-shadow: rgba(122, 122, 122, 0) 0px 0px 6px 3px;
-        -webkit-box-shadow: rgba(122, 122, 122, 0.0588235) 0px 0px 6px 3px;
-        -moz-box-shadow: rgba(122, 122, 122, 0.0588235) 0px 0px 6px 3px;
+        box-shadow: rgba(122, 122, 122, 0.0588235) 0px 0px 6px 3px;
     }
 
     .project:nth-child(3n) {
@@ -330,7 +423,6 @@ footer p:last-child {
         display: inline-block;
         width: 90%;
         height: 1px;
-        -webkit-transform: translateX(-50%);
         transform: translateX(-50%);
         background-color: #a9a9a9;
     }
@@ -415,9 +507,7 @@ footer p:last-child {
         margin: 0 auto;
         width: 100%;
         margin-bottom: 30px;
-        box-shadow: rgba(122, 122, 122, 0) 0px 0px 6px 3px;
-        -webkit-box-shadow: rgba(122, 122, 122, 0.0588235) 0px 0px 6px 3px;
-        -moz-box-shadow: rgba(122, 122, 122, 0.0588235) 0px 0px 6px 3px;
+        box-shadow: rgba(122, 122, 122, 0.0588235) 0px 0px 6px 3px;
     }
 
     .project .link {
@@ -453,69 +543,18 @@ footer p:last-child {
         max-width: 900px;
         display: flex;
         justify-content: space-between;
+        align-items: center;
     }
 
-    .hamburger .btn-gNav {
-        position: relative;
+    .btn-gNav {
+        display: block;
         top: 10px;
         right: 20px;
-        width: 30px;
-        height: 24px;
-        z-index: 10;
-        box-sizing: border-box;
-        cursor: pointer;
-        /*-webkit-transition: all 400ms;
-        transition: all 400ms;*/
-    }
-
-    .hamburger .btn-gNav span {
-        position: absolute;
-        width: 100%;
-        height: 4px;
-        background: #ffffff;
-        border-radius: 10px;
-        /*-webkit-transition: all 400ms;
-        transition: all 400ms;*/
-    }
-
-    .hamburger .btn-gNav span:nth-child(1) {
-        top: 0;
-    }
-
-    .hamburger .btn-gNav span:nth-child(2) {
-        top: 10px;
-    }
-
-    .hamburger .btn-gNav span:nth-child(3) {
-        top: 20px;
-    }
-
-
-    .hamburger .btn-gNav.open span:nth-child(1) {
-        background: #ffffff;
-        top: 6px;
-        -webkit-transform: rotate(-45deg);
-        -moz-transform: rotate(-45deg);
-        transform: rotate(-45deg);
-    }
-
-    .hamburger .btn-gNav.open span:nth-child(2),
-    .hamburger .btn-gNav.open span:nth-child(3) {
-        top: 6px;
-        background: #ffffff;
-        -webkit-transform: rotate(45deg);
-        -moz-transform: rotate(45deg);
-        transform: rotate(45deg);
     }
 
     .gNav .gNav-menu li {
         margin: 0 auto;
         padding: 0 5px;
-    }
-
-
-    .btn-gNav {
-        display: block;
     }
 
     .gNav {
@@ -529,7 +568,8 @@ footer p:last-child {
         box-sizing: border-box;
         z-index: 1;
         padding-top: 50px;
-        transition: .3s;
+        transition: 0.3s;
+        overflow-y: auto;
     }
 
     .gNav.open {
@@ -537,15 +577,9 @@ footer p:last-child {
     }
 
     .gNav .gNav-menu {
-        display: flex;
-        justify-content: space-between;
-        padding: 0;
-        width: 100%;
-        height: 100%;
         display: block;
-        flex-direction: column;
+        width: 100%;
         text-align: center;
-        /*justify-content: center;*/
     }
 
     .gNav .gNav-menu li {
@@ -555,18 +589,69 @@ footer p:last-child {
         border-bottom: #525252 1px solid;
     }
 
-    .gNav .gNav-menu li ul {
-        padding: 5px 0px;
+    .gNav .gNav-menu li.has-panel {
+        padding-bottom: 0;
     }
 
-    .gNav .gNav-menu li ul li {
-        list-style-type: none;
-        width: 86%;
-        padding: 5px;
-        border-bottom: none;
+    /* Research トリガー：タップで下にプルダウン開閉するアコーディオン */
+    .gNav-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding: 15px 0;
     }
 
-    .gNav .gNav-menu li ul li a {
+    .gNav-toggle::after {
+        content: "";
+        width: 7px;
+        height: 7px;
+        margin-left: 0.6em;
+        border-right: 2px solid #fff;
+        border-bottom: 2px solid #fff;
+        transform: rotate(45deg);
+        transition: transform 0.25s ease;
+    }
+
+    .gNav-toggle[aria-expanded="true"]::after {
+        transform: rotate(-135deg);
+    }
+
+    .research-panel {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.35s ease;
+    }
+
+    .research-panel.open {
+        max-height: 640px;
+    }
+
+    .research-panel-close {
+        display: none;
+    }
+
+    .research-list {
+        padding: 10px 0 20px;
+    }
+
+    .research-list li {
+        border-top: 1px solid #333333;
+    }
+
+    .research-list a {
+        align-items: center;
+        gap: 14px;
+        padding: 10px 5%;
+    }
+
+    .research-list img {
+        width: 56px;
+        height: 56px;
+        flex-shrink: 0;
+    }
+
+    .research-name {
         font-size: 15px;
     }
 
@@ -594,16 +679,17 @@ footer p:last-child {
         width: 100%;
         height: 100%;
     }
-    
+
     .f-wrapper {
         flex-direction: column;
         text-align: center;
     }
+
     .f-wrapper .logo {
         margin-left: 0;
         margin-top: 5rem;
     }
 }
 
-/*タブレット用のスタイル*/
-@media screen and (min-width: 641px) and (max-width: 960) {}
+/*タブレット用のスタイル（現状未定義）*/
+@media screen and (min-width: 641px) and (max-width: 960px) {}
